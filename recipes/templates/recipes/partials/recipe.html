@@ -1,0 +1,71 @@
+{% load static %}
+
+<div class="recipe recipe-list-item">
+    <div class="recipe-cover">
+        <a href="{% url 'recipes:recipe' recipe.id %}">
+            <img src="{{recipe.cover.url}}" alt="temp">
+        </a>
+    </div>
+
+    <div class="recipe-title-container">
+        <h2 class="recipe-title">{{recipe.title}}</h2>
+    </div>
+
+    <div class="recipe-author">
+        <span class="recipe-author-item">
+            <em class="fa-regular fa-user"></em>
+            {{recipe.author.first_name}} {{recipe.author.last_name}}
+        </span>
+        <span class="recipe-author-item">
+            <em class="fa-solid fa-calendar-days"></em>
+            {{recipe.created_at_date}} às {{recipe.created_at_hour}}
+        </span>
+        <span class="recipe-author-item">
+            <a href="/recipes/category/cafe-da-manha">
+                <em class="fa-sharp fa-solid fa-layer-group"></em>
+                <span>{{recipe.category.name}}</span>
+            </a>
+        </span>
+    </div>
+
+    <div class="recipe-content">
+        <p>{{recipe.description}}</p>
+    </div>
+
+    <div class="recipe-meta-container">
+        <div class="recipe-meta recipe-preparation">
+            <h3 class="recipe-meta-title">
+                <em class="fa-solid fa-clock"></em>
+                Preparo
+            </h3>
+            <div class="recipe-meta-text">
+                {{recipe.preparation_time}} {{recipe.preparation_time_unit}}
+            </div>
+        </div>
+        <div class="recipe-meta recipe-servings">
+            <h3 class="recipe-meta-title">
+                <em class="fa-solid fa-pizza-slice"></em>
+                Porções
+            </h3>
+            <div class="recipe-meta-text">
+                {{recipe.servings}} {{recipe.servings_unit}}
+            </div>
+        </div>
+    </div>
+
+    {% if is_detail_page is not True %}
+        <footer class="recipe-footer">
+            <a href="{% url 'recipes:recipe' recipe.id %}" class="recipe-read-more button-dark button-full-width">
+                <em class="fa-solid fa-eye"></em>
+                <span>ver mais...</span>
+            </a>
+        </footer>
+    {% endif %}
+
+    {% if is_detail_page %}
+        <div class="preparation-steps">
+         {{recipe.preparation_steps|linebreaksbr}}
+        </div>
+    {% endif%}
+
+</div>
