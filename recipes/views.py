@@ -10,7 +10,7 @@ def home(request):
 
 def recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id, is_published=True)
-    title = 'Details | Recipes'
+    title = f"{recipe.title} | Recipes'"
     return render(request, 'recipes/pages/recipe_detail.html', {'title': title, 'recipe': recipe, 'is_detail_page': True})
 
 
