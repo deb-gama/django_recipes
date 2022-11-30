@@ -1,6 +1,5 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.http import HttpResponse
-from recipes.utils.factory import make_recipe
 from recipes.models import Recipe
 
 def home(request):
@@ -10,7 +9,7 @@ def home(request):
 
 
 def recipe(request, recipe_id):
-    recipe = Recipe.objects.filter(pk=recipe_id, is_published=True).order_by('-id').first()
+    recipe = get_object_or_404(Recipe, pk=recipe_id, is_published=True)
     title = 'Details | Recipes'
     return render(request, 'recipes/pages/recipe_detail.html', {'title': title, 'recipe': recipe, 'is_detail_page': True})
 
