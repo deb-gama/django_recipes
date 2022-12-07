@@ -9,7 +9,7 @@ def home(request):
     return render(
         request,
         'recipes/pages/home.html',
-        {'title': title, 'recipes': recipes}
+        context={'title': title, 'recipes': recipes}
     )
 
 
@@ -19,7 +19,7 @@ def recipe(request, recipe_id):
     return render(
         request,
         'recipes/pages/recipe_detail.html',
-        {'title': title, 'recipe': recipe, 'is_detail_page': True}
+        context={'title': title, 'recipe': recipe, 'is_detail_page': True}
     )
 
 
@@ -30,5 +30,5 @@ def category(request, category_id):
     return render(
         request,
         'recipes/pages/category.html',
-        {'title': title, 'recipes': recipes}
+        context={'title': title, 'recipes': recipes}
     )
