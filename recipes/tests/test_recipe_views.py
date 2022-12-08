@@ -21,6 +21,29 @@ class RecipeViewsTest(TestCase):
         self.response_home = self.client.get(self.home_url)
         self.response_category = self.client.get(self.category_url)
         self.response_recipe = self.client.get(self.recipe_url)
+        self.category = Category.objects.create(name='category_test')
+        self.author = User.objects.create_user(
+            first_name='John',
+            last_name='Doe',
+            username='john_doe',
+            password='1234',
+            email='john_doe@email.com',
+        )
+        self.recipe = Recipe.objects.create(
+            category=self.category,
+            author=self.author,
+            title='some title',
+            description='some description',
+            slug='some-slug',
+            preparation_time=10,
+            preperation_time_unit='Minutos',
+            servings=1,
+            cover='https://some-image.com',
+            servings_unit='Porções',
+            preparation_step='some preparation step',
+            preparation_step_is_html=False,
+            is_published=True,
+        )
 
     def test_recipe_home_view_function(self):
         """
@@ -50,29 +73,6 @@ class RecipeViewsTest(TestCase):
         self.assertEqual(self.response_home.status_code, 200)
 
     def test_home_view_template_loads_recipes(self):
-        category = Category.objects.create(name='category_test')
-        author = User.objects.create_user(
-            first_name='John',
-            last_name='Doe',
-            username='john_doe',
-            password='1234',
-            email='john_doe@email.com',
-        )
-        recipe = Recipe.objects.create(
-            category=category,
-            author=author,
-            title='some title',
-            description='some description',
-            slug='some-slug',
-            preparation_time=10,
-            preperation_time_unit='Minutos',
-            servings=1,
-            cover='https://some-image.com',
-            servings_unit='Porções',
-            preparation_step='some preparation step',
-            preparation_step_is_html=False,
-            is_published=True,
-        )
 
         response = self.client.get(reverse('recipes:home'))
         query = response.context['recipes']
