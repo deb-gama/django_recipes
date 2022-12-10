@@ -98,3 +98,20 @@ class RecipeViewsTest(RecipeTestBase):
         )
         response = self.client.get(recipe_url)
         self.assertEqual(response.status_code, 404)
+
+    def test_recipes_not_published_are_not_appearing_in_home_view(self):
+        """
+        Tests if recipes not published dont appear in home page.
+        """
+        title = 'Some recipe not published yet'
+        self.make_recipe(
+            is_published=False,
+            title='Some recipe not published yet'
+        )
+
+        response = self.client.get(self.home_url)
+        html_to_string = response.content.decode('utf-8')
+        self.assertNotIn(title, html_to_string)
+        self.assertIn('No recipes here', html_to_string)
+
+    # TODO criar teste para receita não publicada nas views recipe e category
