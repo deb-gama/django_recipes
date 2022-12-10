@@ -38,8 +38,8 @@ class RecipeTestBase(TestCase):
         email='john_doe@email.com'
     ):
         """
-        Create a django user author with data set by default values if the method
-        dont get any arguments
+        Create a django user author with data set by default values if the
+        method dont get any arguments
         """
         return User.objects.create_user(
             first_name=first_name,
