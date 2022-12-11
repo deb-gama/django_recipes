@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
-from parameterized import parameterized, parameterized_class
+from parameterized import parameterized
 
-from .recipe_base_test import RecipeTestBase
+from .recipe_base_test import Recipe, RecipeTestBase
 
 
 class RecipeModelTest(RecipeTestBase):
@@ -9,18 +9,39 @@ class RecipeModelTest(RecipeTestBase):
         self.recipe = self.make_recipe()
         return super().setUp()
 
-    def test_recipe_title_raises_error_if_bigger_than_field_max_length(self):
-        """
-        This test make the validation of recipe title max length raising a Validation Error
-        """
-        self.recipe.title = 'A'*70
+    def make_recipe_no_default(self):
+        recipe = Recipe(
+            category=self.make_recipe_category(name='Test new Category'),
+            author=self.make_recipe_author(username='newuser'),
+            title='some title',
+            description='some description',
+            slug='some-slug',
+            preparation_time=10,
+            preperation_time_unit='Minutos',
+            servings=1,
+            cover='https://some-image.com',
+            servings_unit='Porções',
+            preparation_step='some preparation step',
+        )
+        recipe.full_clean()
+        recipe.save()
+        return recipe
 
-        with self.assertRaises(ValidationError):
-            self.recipe.full_clean()  # validação acontece aqui e o código para
-
-    # def test_recipe_description_raises_error_if_bigger_than_field_max_length(self):
+    # def test_recipe_title_raises_error_if_bigger_than_field_max_length(self):
     #     """
     #     This test make the validation of recipe title max length raising a Validation Error
+    #     """
+    #     self.recipe.title = 'A'*70
+
+    #     with self.assertRaises(ValidationError):
+    #         self.recipe.full_clean()  # validação acontece aqui e o código
+    # para
+
+    # def test_recipe_description_raises_error_if_bigger_than_field_
+    # max_length(self):
+    #     """
+    #     This test make the validation of recipe title max length raising a
+    # Validation Error
     #     """
     #     self.recipe.description = 'A'*166
     #     self.recipe.full_clean()
@@ -31,11 +52,32 @@ class RecipeModelTest(RecipeTestBase):
     @parameterized.expand([
         ('title', 65),
         ('description', 165),
-        ('preparation_time_unit', 10),
+        ('preperation_time_unit', 10),
         ('servings_unit', 10),
     ])
     def test_recipe_fields_max_length(self, field, max_length):
+        """
+        Testing max_length fields
+        """
         # set object, campo que quer setar, valor
-        setattr(self.recipe, field, 'A' * (max_length + 0))
+        setattr(self.recipe, field, 'A' * (max_length + 1))
         with self.assertRaises(ValidationError):
             self.recipe.full_clean()
+
+    def test_recipe_preparation_steps_is_html_false_by_default(self):
+        """
+        Test if the preparation_steps_is_html field is False by default
+        """
+        recipe = self.make_recipe_no_default()
+
+        self.assertFalse(recipe.preparation_step_is_html,
+                         msg='Recipe preparation_steps_is_html is not False')
+
+    def test_recipe_is_published_false_by_default(self):
+        """
+        Test if the is_published field is False by default
+        """
+        recipe = self.make_recipe_no_default()
+
+        self.assertFalse(recipe.is_published,
+                         msg='Recipe is_published is not False')
