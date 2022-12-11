@@ -95,14 +95,12 @@ class RecipeModelTest(RecipeTestBase):
             msg='Recipe string representation must be recipe title'
         )
 
-    def test_recipe__category_string_representation(self):
+    def test_recipe__category_string_representation_is_name_field(self):
         """
         Testing __str__ method of category model.
         """
         category = self.make_recipe_category(
             name='Testing Representation String Category')
-        self.recipe.full_clean()
-        self.recipe.save()
 
         self.assertEqual(
             str(category), 'Testing Representation String Category',
