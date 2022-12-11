@@ -11,16 +11,12 @@ class RecipesURLsTest(TestCase):
             kwargs={'category_id': self.id_category}
         )
         self.recipe_id = 2
-        self.recipe_url = reverse('recipes:recipe',
-                                  kwargs={'recipe_id': self.recipe_id}
-                                  )
-        self.home_url = reverse('recipes:home')
 
     def test_recipe_home_url_is_correct(self):
         """
         Test must confirm wich url its been resolve for home
         """
-        url = self.home_url
+        url = reverse('recipes:home')
         self.assertEqual(url, '/')
 
     def test_recipe_category_url_is_correct(self):
@@ -34,5 +30,14 @@ class RecipesURLsTest(TestCase):
         """
         Test must confirm wich url its been resolve for recipe
         """
-        url = self.recipe_url
+        url = reverse('recipes:recipe',
+                      kwargs={'recipe_id': self.recipe_id}
+                      )
         self.assertEqual(url, f'/recipes/{self.recipe_id}/')
+
+    def test_recipe_search_url_is_correct(self):
+        """
+        Test must confirm wich url its been resolve for search
+        """
+        url = reverse('recipes:search')
+        self.assertEqual(url, '/recipes/search')
