@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from parameterized import parameterized
 
-from .recipe_base_test import Recipe, RecipeTestBase
+from .recipe_base_test import Category, Recipe, RecipeTestBase
 
 
 class RecipeModelTest(RecipeTestBase):
@@ -81,3 +81,30 @@ class RecipeModelTest(RecipeTestBase):
 
         self.assertFalse(recipe.is_published,
                          msg='Recipe is_published is not False')
+
+    def test_recipe_string_representation(self):
+        """
+        Testing __str__ method of recipe model.
+        """
+        self.recipe.title = 'Testing Representation String'
+        self.recipe.full_clean()
+        self.recipe.save()
+
+        self.assertEqual(
+            str(self.recipe), 'Testing Representation String',
+            msg='Recipe string representation must be recipe title'
+        )
+
+    def test_recipe__category_string_representation(self):
+        """
+        Testing __str__ method of category model.
+        """
+        category = self.make_recipe_category(
+            name='Testing Representation String Category')
+        self.recipe.full_clean()
+        self.recipe.save()
+
+        self.assertEqual(
+            str(category), 'Testing Representation String Category',
+            msg='Category string representation must be category name.'
+        )
