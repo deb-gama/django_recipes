@@ -1,3 +1,4 @@
+from django.test import TestCase
 from django.urls import resolve, reverse
 
 from recipes import views
@@ -115,3 +116,18 @@ class RecipeViewsTest(RecipeTestBase):
         self.assertIn('No recipes here', html_to_string)
 
     # TODO criar teste para receita não publicada nas views recipe e category
+
+    def test_recipe_search_view_function(self):
+        """
+        Test must confirm if the correct view has been executed in search url
+        """
+        # alternativa não dinâmica: resolve('/')
+        view = resolve(reverse('recipes:search'))
+        self.assertIs(view.func, views.search)
+
+    def test_search_view_render_correct_template(self):
+        """
+        Tests if search url render the correct template
+        """
+        response = self.client.get(reverse('recipes:search'))
+        self.assertTemplateUsed(response, 'recipes/pages/search.html')

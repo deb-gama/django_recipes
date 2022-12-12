@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from recipes.models import Recipe
@@ -32,3 +33,7 @@ def category(request, category_id):
         'recipes/pages/category.html',
         context={'title': title, 'recipes': recipes}
     )
+
+
+def search(request):
+    return render(request, 'recipes/pages/search.html')
