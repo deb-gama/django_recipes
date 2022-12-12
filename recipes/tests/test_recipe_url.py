@@ -40,4 +40,4 @@ class RecipesURLsTest(TestCase):
         Test must confirm wich url its been resolve for search
         """
         url = reverse('recipes:search')
-        self.assertEqual(url, '/recipes/search')
+        self.assertEqual(url, '/recipes/search/')
