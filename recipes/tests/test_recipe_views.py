@@ -1,4 +1,3 @@
-from django.test import TestCase
 from django.urls import resolve, reverse
 
 from recipes import views
@@ -129,5 +128,15 @@ class RecipeViewsTest(RecipeTestBase):
         """
         Tests if search url render the correct template
         """
-        response = self.client.get(reverse('recipes:search'))
-        self.assertTemplateUsed(response, 'recipes/pages/search.html')
+        response = self.client.get(reverse('recipes:search') + '?q=teste')
+        self.assertTemplateUsed(response, 'recipes/pages/search_page.html')
+
+    def test_recipe_search_view_return_404_if_query_dont_exists(self):
+        """
+        Tests if recipe url returns a 'not found' status code when
+        the value of the query was not found
+        """
+        url = reverse('recipes:search')
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, 404)

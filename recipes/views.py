@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import Http404
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from recipes.models import Recipe
@@ -27,7 +27,7 @@ def recipe(request, recipe_id):
 def category(request, category_id):
     recipes = get_list_or_404(Recipe.objects.filter(
         category__id=category_id).order_by('-id'))
-    title = f"{recipes[0].category.name} - Category | Recipes'"
+    title = f"{recipes[0].category.name} - Category | Recipes"
     return render(
         request,
         'recipes/pages/category.html',
@@ -36,4 +36,9 @@ def category(request, category_id):
 
 
 def search(request):
-    return render(request, 'recipes/pages/search.html')
+    search_term = request.GET.get('q')
+
+    if not search_term:
+        raise Http404()
+
+    return render(request, 'recipes/pages/search_page.html')
