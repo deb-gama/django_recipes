@@ -37,8 +37,13 @@ def category(request, category_id):
 
 def search(request):
     search_term = request.GET.get('q')
+    title = f"Search for {search_term} | Recipes"
 
     if not search_term:
         raise Http404()
 
-    return render(request, 'recipes/pages/search_page.html')
+    return render(
+        request,
+        'recipes/pages/search_page.html',
+        context={'title': title, 'search_term': search_term}
+    )
