@@ -36,8 +36,9 @@ def category(request, category_id):
 
 
 def search(request):
-    search_term = request.GET.get('q')
-    title = f"Search for {search_term} | Recipes"
+    # strip tira espaços da string
+    search_term = request.GET.get('q', '').strip()
+    title = f'Search for "{search_term}" | Recipes'
 
     if not search_term:
         raise Http404()
