@@ -19,6 +19,7 @@ class RecipeTestBase(TestCase):
         self.response_home = self.client.get(self.home_url)
         self.response_category = self.client.get(self.category_url)
         self.response_recipe = self.client.get(self.recipe_url)
+        self.search_url = reverse('recipes:search')
 
         return super().setUp()
 
