@@ -1,30 +1,22 @@
-from django.core.paginator import Paginator
+import os
+
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from recipes.models import Recipe
 
-from .utils.pagination import make_pagination_range
+from .utils.pagination import make_pagination
+
+PER_PAGES = int(os.environ.get('PER_PAGE', 6))
 
 
 def home(request):
     title = 'Home | Recipes'
     recipes = Recipe.objects.filter(is_published=True).order_by('-id')
 
-    try:
-        current_page = int(request.GET.get('page', 1))
-    except ValueError:
-        current_page = 1
-
-    paginator = Paginator(recipes, 9)
-    page_object = paginator.get_page(current_page)
-
-    pagination_range = make_pagination_range(
-        paginator.page_range,
-        4,
-        current_page
-    )
+    page_object, pagination_range = make_pagination(
+        request, recipes, PER_PAGES)
 
     return render(
         request,
@@ -48,10 +40,15 @@ def category(request, category_id):
     recipes = get_list_or_404(Recipe.objects.filter(
         category__id=category_id).order_by('-id'))
     title = f"{recipes[0].category.name} - Category | Recipes"
+
+    page_object, pagination_range = make_pagination(
+        request, recipes, PER_PAGES)
+
     return render(
         request,
         'recipes/pages/category.html',
-        context={'title': title, 'recipes': recipes}
+        context={'title': title, 'recipes': page_object,
+                 'pagination_range': pagination_range}
     )
 
 

@@ -1,4 +1,6 @@
-from django.urls import resolve
+from unittest.mock import patch
+
+from django.urls import resolve, reverse
 
 from recipes import views
 
@@ -66,3 +68,19 @@ class RecipeHomeViewsTest(RecipeTestBase):
         self.assertIn('No recipes here', html_to_string)
 
     # TODO criar teste para receita não publicada nas views recipe e category
+
+    @patch('recipes.views.PER_PAGES', new='3')
+    def test_recipe_home_is_paginated(self):
+
+        for i in range(8):
+            kwargs = {'slug': f'r{i}', 'author_data': {'username': f'u{i}'}}
+            self.make_recipe(**kwargs)
+
+        response = self.client.get(reverse('recipes:home'))
+        recipes = response.context['recipes']
+        paginator = recipes.paginator
+
+        self.assertEqual(paginator.num_pages, 3)
+        self.assertEqual(len(paginator.get_page(1)), 3)
+        self.assertEqual(len(paginator.get_page(2)), 3)
+        self.assertEqual(len(paginator.get_page(3)), 2)
