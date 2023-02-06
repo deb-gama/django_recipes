@@ -4,31 +4,35 @@
     {% include 'recipes/partials/header.html' %}
     {% include 'recipes/partials/search.html' %}
 
-    <main class="main-content center container">
+    <div class="main-content center container">
         <h2>Register</h2>
+    </div>
 
-        <div class="main_content container">
-            <form action="{% url 'authors:create' %}" method="POST">
-                {% csrf_token %}
-                <div class="form-content form-content-grid">
-                    {% for field in form %}
-                    <div class="form-group">
-                        <label for="{{field.id_for_label}}">{{field.label}}</label>
-                        {{field}}
+    <div class="main_content container">
+        <form action="{% url 'authors:register_create' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-content form-content-grid">
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{field.id_for_label}}">{{field.label}}</label>
+                    {{field}}
 
-                        {% if field.help_text %}
-                        <p class="help-text">{{field.help_text}}</p>
-                        {% endif%}
+                    {% if field.help_text %}
+                    <p class="help-text">{{field.help_text}}</p>
+                    {% endif%}
 
-                        {{field.errors}}
-                    </div>
-                    {% endfor %}
+                    {{field.errors}}
                 </div>
-                <div class="formgroup">
+                {% endfor %}
+            </div>
+
+            <div class="form-content form-content-grid">
+                <div class="form-group">
                     <button type="submit">Send</button>
                 </div>
-            </form>
-        </div>
-    </main>
+            </div>
+
+        </form>
+    </div>
     {% include 'recipes/partials/footer.html' %}
 </body>
