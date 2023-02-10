@@ -6,12 +6,9 @@ from .forms import RegisterForm
 
 
 def register_view(request):
-    # register_form_data = request.session.get('register_form_data', None)
+    register_form_data = request.session.get('register_form_data', None)
     title = 'Auhors | Register'
-    if request.POST:
-        form = RegisterForm(request.POST)
-    else:
-        form = RegisterForm()
+    form = RegisterForm(register_form_data)
 
     return render(
         request,
@@ -27,9 +24,9 @@ def register_create(request):
         raise Http404()
 
     POST = request.POST
-    request.session['register_fomr_data'] = POST
+    request.session['register_form_data'] = POST
     form = RegisterForm(POST)
 
-    return redirect(request,'authors:register')
+    return redirect('authors:register')
 
 
