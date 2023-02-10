@@ -6,13 +6,19 @@ from .forms import RegisterForm
 
 
 def register_view(request):
-    register_form_data = request.session.get('register_form_data', None)
-    form = RegisterForm(register_form_data)
+    # register_form_data = request.session.get('register_form_data', None)
     title = 'Auhors | Register'
-    return render(request, 'authors/pages/register_view.html', {
-        'form': form,
-        'title':title,
-        # 'form_action': reverse('authors:register_create')
+    if request.POST:
+        form = RegisterForm(request.POST)
+    else:
+        form = RegisterForm()
+
+    return render(
+        request,
+        'authors/pages/register_view.html',
+        {
+            'form': form,
+            'title': title
         }
     )
 
@@ -24,6 +30,6 @@ def register_create(request):
     request.session['register_fomr_data'] = POST
     form = RegisterForm(POST)
 
-    return redirect('authors:register')
+    return redirect(request,'authors:register')
 
 
