@@ -329,16 +329,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .message {
-   background-color: var(--color-error-light);
    padding: 1rem 2rem;
    border-radius: 0.4rem;
-   border: solid 1px var(--color-error-dark);
+   font-weight:bold;
 }
 
 .message-error {
+   background-color: var(--color-error-light);
+   border: solid 1px var(--color-error-dark);
    color: var(--color-error-dark);
-   font-weight:bold;
-   font-size: 1.8rem;
+
+}
+
+.message-success {
+   background-color: var(--color-success-light);
+   color: var(--color-success-dark);
+   border: solid 1px var(--color-success-dark);
 }
 
 @media (max-width: 600px) {
