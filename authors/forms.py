@@ -27,8 +27,8 @@ class RegisterForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         add_placeholder(self.fields['username'],'Your username')
-        add_placeholder(self.fields['email'],'Ex: youremail@email.com')
-        add_placeholder(self.fields['first_name'],'Ex: John')
+        add_placeholder(self.fields['email'],'Ex: your_best_email@email.com')
+        add_placeholder(self.fields['first_name'],'Ex: John / Jane')
         add_placeholder(self.fields['last_name'],'Ex: Doe')
 
 

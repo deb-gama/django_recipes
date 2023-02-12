@@ -50,6 +50,7 @@ class RecipeHomeViewsTest(RecipeTestBase):
         self.make_recipe()
         response = self.client.get(self.home_url)
         query = response.context['recipes']
+
         self.assertEqual(query.count(), 1)
 
     def test_recipes_not_published_are_not_appearing_in_home_view(self):
