@@ -8,10 +8,10 @@ from .forms import RegisterForm
 def register_view(request):
     """
     This view is responsible for rendering an empty form when in GET mode and
-    receiving the register_form_data in the register redirection create view.
+    receiving the register_form_data in the register redirection  create view.
     """
-    register_form_data = request.session.get('register_form_data', None)
     title = 'Auhors | Register'
+    register_form_data = request.session.get('register_form_data', None)
     form = RegisterForm(register_form_data)
 
     return render(

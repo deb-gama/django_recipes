@@ -6,7 +6,6 @@ def add_attr(field, attr_name, attr_new_value):
     existing_attr = field.widget.attrs.get(attr_name, '')
     field.widget.attrs[attr_name] = f'{existing_attr} {attr_new_value}'.strip()
 
-
 def add_placeholder(field, placeholder_value):
     field.widget.attrs['placeholder'] = placeholder_value
 
@@ -19,8 +18,6 @@ class RegisterForm(forms.ModelForm):
         add_placeholder(self.fields['last_name'],'Ex: Doe')
 
 
-
-
     confirm_password = forms.CharField(
         required=True,
         widget = forms.PasswordInput(attrs = {
@@ -29,7 +26,6 @@ class RegisterForm(forms.ModelForm):
         error_messages={
         'required': 'You must have to confirm your password'
         },
-        help_text=('Passwords must be equals')
     )
 
 
@@ -77,9 +73,34 @@ class RegisterForm(forms.ModelForm):
 
         if 'atenção' in data:
             raise ValidationError(
-                'Não digite atenção no campo password',
+                'Não digite %(value)s no campo first name',
                 code = 'invalid',
+                params = {'value': '"atenção"'}
             )
 
         return data
 
+    def clean_first_name(self):
+        data = self.cleaned_data.get('first_name')
+
+        if 'John Doe' in data:
+            raise ValidationError(
+                'Não digite %(value)s no campo first name',
+                code = 'invalid',
+                params = {'value': '"John Doe"'}
+            )
+
+        return data
+
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get('password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        if password != confirm_password:
+            raise ValidationError({
+                'confirm_password': 'The passwords must be equal'
+            }
+
+            )
