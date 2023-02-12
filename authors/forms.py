@@ -28,7 +28,7 @@ class RegisterForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         add_placeholder(self.fields['username'],'Your username')
         add_placeholder(self.fields['email'],'Ex: youremail@email.com')
-        add_placeholder(self.fields['first_name'],'Ex: Jon')
+        add_placeholder(self.fields['first_name'],'Ex: John')
         add_placeholder(self.fields['last_name'],'Ex: Doe')
 
 
@@ -52,8 +52,6 @@ class RegisterForm(forms.ModelForm):
         },
         validators = [strong_password]
     )
-
-
 
     class Meta:
         model = User
@@ -82,16 +80,6 @@ class RegisterForm(forms.ModelForm):
                 'required': 'This field must not be empty',
             }
         }
-
-        widgets = {
-            'username': forms.TextInput(attrs = {
-            'class': 'input text-input'
-            }),
-            'password': forms.PasswordInput(attrs = {
-            'placeholder': 'Type your password here',
-            }),
-        }
-
 
     def clean_password(self):
         data = self.cleaned_data.get('password')
