@@ -40,6 +40,7 @@ class RegisterForm(forms.ModelForm):
         error_messages={
         'required': 'You must have to confirm your password'
         },
+        label = 'Confirm Password'
     )
 
     password = forms.CharField(
@@ -50,7 +51,9 @@ class RegisterForm(forms.ModelForm):
         error_messages={
         'required': 'This field must not be empty'
         },
-        validators = [strong_password]
+        label = 'Password',
+        validators = [strong_password],
+
     )
 
     class Meta:
@@ -68,7 +71,6 @@ class RegisterForm(forms.ModelForm):
             'last_name': 'Last Name',
             'username': 'Username',
             'email': 'E-mail',
-            'password': 'Password',
         }
 
         help_texts = {
