@@ -1,6 +1,11 @@
-from django.test import TestCase
-from authors.forms import RegisterForm
+from unittest import TestCase
+
+from django.test import TestCase as DjangoTestCase
+from django.urls import reverse
 from parameterized import parameterized
+
+from authors.forms import RegisterForm
+
 
 class AuthorRegisterFormUnitTest(TestCase):
 
@@ -19,7 +24,7 @@ class AuthorRegisterFormUnitTest(TestCase):
         self.assertEqual(current_placeholder, placeholder)
 
     @parameterized.expand([
-       ('email', 'The email must be valid'),
+        ('email', 'The email must be valid'),
     ])
     def test_fields_help_text(self, field, needed):
         form = RegisterForm()
@@ -30,9 +35,9 @@ class AuthorRegisterFormUnitTest(TestCase):
     @parameterized.expand([
         ('first_name', 'First Name'),
         ('last_name', 'Last Name'),
-        ('username','Username'),
-        ('email','E-mail'),
-        ('password','Password'),
+        ('username', 'Username'),
+        ('email', 'E-mail'),
+        ('password', 'Password'),
         ('confirm_password', 'Confirm Password'),
     ])
     def test_fields_label(self, field, label):
@@ -42,4 +47,29 @@ class AuthorRegisterFormUnitTest(TestCase):
         self.assertEqual(current_label, label)
 
 
+class AuthorRegisterFormIntegrationTest(DjangoTestCase):
+    def setUp(self) -> None:
+        self.form_data = {
+            'username': 'user',
+            'first_name': 'First',
+            'last_name': 'Last',
+            'email': 'mail@mail.com',
+            'password': 'StrongP@ssword1',
+            'confirm_password': 'StrongP@ssword1'
+        }
+        return super().setUp()
 
+    @parameterized.expand([
+        ('username', 'This field must not be empty'),
+        ('first_name', 'Type your First Name'),
+        ('last_name', 'Type your Last Name'),
+        ('password', 'Password must not be empty'),
+        ('confirm_password', 'Please, repeat your password'),
+        ('email', 'E-mail is required'),
+    ])
+    def test_fields_cannot_be_empty(self, field, message):
+        self.form_data[field] = ''
+        url = reverse('authors:register_create')
+        response = self.client.post(url, data=self.form_data, follow=True)
+
+        self.assertIn(message, response.context['form'].errors.get(field))
