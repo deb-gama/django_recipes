@@ -4,7 +4,7 @@ from django.test import TestCase as DjangoTestCase
 from django.urls import reverse
 from parameterized import parameterized
 
-from authors.forms import RegisterForm
+from authors.forms import RegisterForm, LoginForm
 
 
 class AuthorRegisterFormUnitTest(TestCase):
