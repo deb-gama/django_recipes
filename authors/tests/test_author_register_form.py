@@ -120,3 +120,42 @@ class AuthorRegisterFormIntegrationTest(DjangoTestCase):
         message = 'The passwords must be equal'
 
         self.assertNotIn(message, response.content.decode('utf-8'))
+
+
+    def test_send_get_request_to_register_create_view_must_return_a_404(self):
+
+        url = reverse('authors:register_create')
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, 404)
+
+
+    def test_email_must_be_unique(self):
+        self.form_data['email'] = 'email@email.com'
+        url = reverse('authors:register_create')
+
+        self.client.post(url, data=self.form_data, follow=True)
+        response = self.client.post(url, data=self.form_data, follow=True)
+
+        message = "This email is already in use"
+
+        self.assertIn(message, response.context['form'].errors.get('email'))
+        self.assertIn(message, response.content.decode('utf-8'))
+
+
+    def test_author_created_can_login(self):
+        url = reverse('authors:register_create')
+        self.form_data.update({
+            'username': 'testuser',
+            'password': '@Bcd1234',
+            'confirm_password': '@Bcd1234'
+        })
+
+        self.client.post(url, data=self.form_data, follow=True)
+
+        is_autheticated = self.client.login(
+            username = 'testuser',
+            password = '@Bcd1234',
+        )
+
+        self.assertTrue(is_autheticated)
