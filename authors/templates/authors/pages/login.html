@@ -5,24 +5,26 @@
 {% include 'recipes/partials/search.html' %}
 
 <div class="main-content center container">
-    <h2>Register</h2>
+    <h2>Login</h2>
+    {% if request.user.is_authenticated %}
+    <p>
+        Your are logged in with
+        {{ request.user.username }}.
+        Please,
+    <form action="{% url 'authors:logout' %}" method="POST">
+        <button>click here</button> to logout.
+    </form>
+    </p>
+    {% endif %}
 </div>
 
 {% include 'recipes/partials/messages.html' %}
 
-<div class="main-content container">
+
+
+<div class="main-content center container">
     <form action="{% url 'authors:login_create' %}" method="POST">
         {% csrf_token %}
-
-        <div class="main-content center container">
-            {% if request.user.is_authenticated %}
-            <p>
-                Your are logged in with
-                {{ request.user.username }}.
-            </p>
-            {% endif %}
-        </div>
-
 
         <div class="form-content form-content-grid">
             {% for field in form %}
@@ -39,12 +41,19 @@
             {% endfor %}
         </div>
 
-
+        {% if form.errors %}
+        <div class="main-content center container messages-container">
+            <div class="message message-error">
+                There are errors in the form. Please fix them, and send again
+            </div>
+        </div>
+        {% endif %}
 
         <div class="form-group center">
-            <button type="submit">Log In</button>
+            <button type="submit">Login</button>
         </div>
     </form>
+
 </div>
 {% include 'recipes/partials/footer.html' %}
 {% endblock content %}
