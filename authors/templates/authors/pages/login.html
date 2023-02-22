@@ -6,22 +6,10 @@
 
 <div class="main-content center container">
     <h2>Login</h2>
-    {% if request.user.is_authenticated %}
-    <div class="inline-form">
-        Your are logged in with
-        {{ request.user.username }}.
-        Please,
-        <form action="{% url 'authors:logout' %}" method="POST">
-            {% csrf_token %}
-            <input type="hidden" value="{{request.user.username}}"">
-    <button class=" plaintext-button">click here</button> to logout.
-        </form>
-    </div>
-    {% endif %}
+    {% include 'authors/partials/logout_message.html' %}
 </div>
 
 {% include 'recipes/partials/messages.html' %}
-
 
 
 <div class=" main-content center container">
