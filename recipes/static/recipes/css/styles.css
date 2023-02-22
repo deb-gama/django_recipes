@@ -347,10 +347,24 @@ h1, h2, h3, h4, h5, h6 {
    border: solid 1px var(--color-success-dark);
 }
 
+.plaintext-button {
+   display: inline;
+   border: none;
+   background: none;
+   cursor: pointer;
+   color: var(--color-primary);
+   font-size: 1.6rem;
+}
+
+.inline-form{
+   font-size: 1.6rem;
+}
+
 @media (max-width: 600px) {
    .main-content-list,
    .form-content-grid {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
    }
 }
+
 

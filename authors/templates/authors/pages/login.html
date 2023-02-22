@@ -7,14 +7,16 @@
 <div class="main-content center container">
     <h2>Login</h2>
     {% if request.user.is_authenticated %}
-    <p>
+    <div class="inline-form">
         Your are logged in with
         {{ request.user.username }}.
         Please,
-    <form action="{% url 'authors:logout' %}" method="POST">
-        <button>click here</button> to logout.
-    </form>
-    </p>
+        <form action="{% url 'authors:logout' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{request.user.username}}"">
+    <button class=" plaintext-button">click here</button> to logout.
+        </form>
+    </div>
     {% endif %}
 </div>
 
@@ -22,7 +24,7 @@
 
 
 
-<div class="main-content center container">
+<div class=" main-content center container">
     <form action="{% url 'authors:login_create' %}" method="POST">
         {% csrf_token %}
 
