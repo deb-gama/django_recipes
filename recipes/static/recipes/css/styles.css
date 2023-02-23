@@ -360,6 +360,22 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 1.6rem;
 }
 
+.author-dashboard-container {
+   max-width: 64rem;
+   padding: var(--spacing-gutter-medium);
+   text-align: left;
+   margin: 0 auto;
+
+}
+
+.author-dashboard-container h3,
+.author-dashboard-container p,
+.author-dashboard-container ul {
+   list-style-type: none;
+   margin: 1rem 0;
+}
+
+
 @media (max-width: 600px) {
    .main-content-list,
    .form-content-grid {
