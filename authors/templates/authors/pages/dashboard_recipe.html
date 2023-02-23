@@ -12,9 +12,39 @@
 <div class=" main-content center container">
     {% include 'authors/partials/logout_message.html' %}
 
-    <div class="author-dashboard-container">
-        Form
-    </div>
+    <form action="{% url 'authors:register_create' %}" method="POST">
+        {% csrf_token %}
+
+        <div class="author-dashboard-container">
+            <div class="form-content form-content-grid">
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{field}}
+
+                    {% if field.help_text %}
+                    <p class="help-text">{{ field.help_text }}</p>
+                    {% endif %}
+
+                    {{ field.errors }}
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if form.errors %}
+            <div class="main-content center container messages-container">
+                <div class="message message-error">
+                    There are errors in the form. Please fix them, and send again
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+    </form>
+
+</div>
 </div>
 {% include 'recipes/partials/footer.html' %}
 {% endblock content %}
