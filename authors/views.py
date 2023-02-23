@@ -88,6 +88,7 @@ def logout_view(request):
     if not request.POST:
         return redirect(reverse('authors:login'))
 
+    messages.success(request, 'Logged out successfully')
     logout(request)
     return redirect(reverse('authors:login'))
 
