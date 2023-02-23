@@ -15,7 +15,20 @@ class AuthorRecipeForm(forms.ModelForm):
         widgets = {
             'cover': forms.FileInput(
                 attrs = {
-            'class': 'span-2'
+                    'class': 'span-2'
                 }
-            )
+            ),
+            'servings_unit': forms.Select(
+                choices = (
+                    ('Porções', 'Porções'),
+                    ('Pedaços', 'Pedaços'),
+                    ('Fatias', 'Fatias'),
+                )
+            ),
+            'preperation_time_unit': forms.Select(
+                choices = (
+                    ('Minutos', 'Minutos'),
+                    ('Horas', 'Horas'),
+                )
+            ),
         }
