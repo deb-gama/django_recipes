@@ -12,3 +12,10 @@ class AuthorRecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = 'title','description', 'preparation_time','preperation_time_unit', 'servings', 'servings_unit', 'preparation_step', 'cover'
+        widgets = {
+            'cover': forms.FileInput(
+                attrs = {
+            'class': 'span-2'
+                }
+            )
+        }
