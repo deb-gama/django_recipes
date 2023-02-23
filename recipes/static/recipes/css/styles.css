@@ -271,6 +271,11 @@ h1, h2, h3, h4, h5, h6 {
    text-align: center;
 }
 
+.left {
+   text-align: left;
+}
+
+
 /* PAGINATION */
 
 .pagination page-item {
@@ -308,7 +313,9 @@ h1, h2, h3, h4, h5, h6 {
    color: var(--color-error-dark)
 }
 
-.form-content input {
+.form-content input,
+.form-content textarea,
+.form-content select{
    width: 100%;
    padding: 1rem;
    border-radius: 0.4rem;
@@ -358,6 +365,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .inline-form{
    font-size: 1.6rem;
+}
+
+.span-2 {
+   grid-column: span 2;
 }
 
 .author-dashboard-container {
