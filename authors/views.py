@@ -121,7 +121,21 @@ def dashboard_recipe_edit(request, recipe_id):
     if not recipe:
         raise Http404()
 
-    form =AuthorRecipeForm(request.POST or None, instance=recipe)
+    form =AuthorRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)
+
+    if form.is_valid():
+        # salvando os dados na variável antes de salvar na base de dados
+        recipe = form.save(commit=False)
+
+        recipe.author = request.user
+        recipe.preparation_step_is_html = False
+        recipe.is_published = False
+
+        # salvando na base de dados após verifcações feitas acima
+        recipe.save()
+        messages.success(request, 'Your recipe was saved!')
+        return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe_id,)))
+
     return render(request, 'authors/pages/dashboard_recipe.html', {
       'title': title,
       'recipe': recipe,

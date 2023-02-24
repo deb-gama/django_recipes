@@ -15,7 +15,7 @@
         {% include 'authors/partials/logout_message.html' %}
 
         <div class="left">
-            <form action="{% url 'authors:register_create' %}" method="POST">
+            <form method="POST" enctype='multipart/form-data'>
                 {% csrf_token %}
 
                 <div class="form-content form-content-grid">
