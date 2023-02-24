@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from recipes.models import Recipe
 
-from .forms import LoginForm, RegisterForm, AuthorRecipeForm
+from .forms import LoginForm, RegisterForm, AuthorRecipeForm, AuthorCreateRecipeForm
 
 def register_view(request):
     """
@@ -111,7 +111,7 @@ def dashboard_view(request):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def dashboard_recipe_edit(request, recipe_id):
-    title = 'Authors | Dashboard Recipe'
+    title = 'Authors | Dashboard Edit Recipe'
     recipe = Recipe.objects.filter(
         is_published=False,
         author = request.user,
@@ -142,4 +142,36 @@ def dashboard_recipe_edit(request, recipe_id):
       'form': form,
       }
     )
+
+
+@login_required(login_url='authors:login', redirect_field_name='next')
+def dashboard_recipe_create(request):
+    title = 'Authors | Dashboard Create Recipe'
+    recipe = Recipe()
+
+    form =AuthorCreateRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)
+
+    if form.is_valid():
+        # salvando os dados na variável antes de salvar na base de dados
+        recipe = form.save(commit=False)
+
+        recipe.author = request.user
+        recipe.preparation_step_is_html = False
+        recipe.is_published = False
+
+        # salvando na base de dados após verifcações feitas acima
+        recipe.save()
+        messages.success(request, 'Your recipe was created!')
+        return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe.id,)))
+        # return redirect(reverse('authors:dashboard_recipe_create'))
+
+    return render(request, 'authors/pages/dashboard_recipe_create.html', {
+      'title': title,
+    #   'recipe': recipe,
+      'form': form,
+      }
+    )
+
+
+
 

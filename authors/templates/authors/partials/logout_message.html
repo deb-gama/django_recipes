@@ -2,7 +2,8 @@
 <div class="inline-form">
     Your are logged in with
     {{ request.user.username }}.
-    <a href="{% url 'authors:dashboard' %}">See your recipes</a> or
+    <a href="{% url 'authors:dashboard' %}">See your recipes</a>, <a
+        href="{% url 'authors:dashboard_recipe_create' %}">create your recipes</a> or
     <form action="{% url 'authors:logout' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{request.user.username}}"">
