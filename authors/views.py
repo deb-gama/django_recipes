@@ -175,6 +175,12 @@ def dashboard_recipe_create(request):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def dashboard_recipe_delete(request, recipe_id):
+    if  not request.POST:
+        raise Http404()
+
+    POST = request.POST
+    id = POST.get('id')
+
     recipe = Recipe.objects.filter(
         is_published=False,
         author = request.user,
