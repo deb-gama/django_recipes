@@ -185,7 +185,10 @@ def dashboard_recipe_delete(request, recipe_id):
         raise Http404()
 
     recipe.delete()
+    messages.success(request, 'Deleted successfully')
     return redirect('authors:dashboard')
+
+
 
 
 

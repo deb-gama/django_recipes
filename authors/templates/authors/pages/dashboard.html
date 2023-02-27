@@ -1,3 +1,4 @@
+{% load static %}
 {% include 'recipes/partials/head.html' %}
 
 {% block content %}
@@ -20,7 +21,7 @@
             <li>
                 <a href="{% url 'authors:dashboard_recipe_edit' recipe.id %}">{{ recipe.title }}</a>
 
-                <form action="{% url 'authors:dashboard_recipe_delete' recipe.id %}" method='POST'>
+                <form class="form-delete" action="{% url 'authors:dashboard_recipe_delete' recipe.id %}" method='POST'>
                     {% csrf_token %}
                     <button type=" submit"> Delete </button>
                 </form>
@@ -35,4 +36,5 @@
     </div>
 </div>
 {% include 'recipes/partials/footer.html' %}
+<script src="{% static 'recipes/js/scripts.js' %}"></script>
 {% endblock content %}
