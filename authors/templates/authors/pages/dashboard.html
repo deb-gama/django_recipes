@@ -19,6 +19,11 @@
             {% for recipe in recipes %}
             <li>
                 <a href="{% url 'authors:dashboard_recipe_edit' recipe.id %}">{{ recipe.title }}</a>
+
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <button type="submit"> Delete </button>
+                </form>
             </li>
             {% empty %}
             <li>

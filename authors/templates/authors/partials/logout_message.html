@@ -3,7 +3,7 @@
     Your are logged in with
     {{ request.user.username }}.
     <a href="{% url 'authors:dashboard' %}">See your recipes</a>, <a
-        href="{% url 'authors:dashboard_recipe_create' %}">create your recipes</a> or
+        href="{% url 'authors:dashboard_recipe_create' %}">create a new recipe</a> or
     <form action="{% url 'authors:logout' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{request.user.username}}"">
