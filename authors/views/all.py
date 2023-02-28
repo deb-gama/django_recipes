@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from recipes.models import Recipe
 
-from .forms import LoginForm, RegisterForm, AuthorRecipeForm, AuthorCreateRecipeForm
+from authors.forms import LoginForm, RegisterForm, AuthorRecipeForm, AuthorCreateRecipeForm
 
 def register_view(request):
     """
@@ -183,7 +183,6 @@ def dashboard_recipe_create(request):
 
     return render(request, 'authors/pages/dashboard_recipe_create.html', {
       'title': title,
-    #   'recipe': recipe,
       'form': form,
       }
     )
