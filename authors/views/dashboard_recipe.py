@@ -19,10 +19,10 @@ class DashboardRecipe(View):
             }
         )
 
-    def get_recipe(self, recipe_id):
+    def get_recipe(self, recipe_id=None):
         recipe = None
 
-        if recipe_id:
+        if recipe_id is not None:
             recipe = Recipe.objects.filter(
                 is_published=False,
                 author = self.request.user,
@@ -34,7 +34,7 @@ class DashboardRecipe(View):
 
         return recipe
 
-    def get(self,request, recipe_id):
+    def get(self,request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
         title = 'Authors | Dashboard Edit Recipe'
         form = AuthorRecipeForm(instance=recipe)
@@ -42,10 +42,10 @@ class DashboardRecipe(View):
         return self.render_recipe( form, title, recipe)
 
 
-    def post(self, request, recipe_id):
+    def post(self, request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
         title = 'Authors | Dashboard Edit Recipe'
-        form = AuthorRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)
+        form = AuthorRecipeForm(data=request.POST or None,files=request.FILES or None, instance=recipe)
 
         if form.is_valid():
             # salvando os dados na variável antes de salvar na base de dados
@@ -58,7 +58,7 @@ class DashboardRecipe(View):
             # salvando na base de dados após verifcações feitas acima
             recipe.save()
             messages.success(request, 'Your recipe was saved!')
-            return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe_id,)))
+            return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe.id,)))
 
         return self.render_recipe(form, title, recipe)
 
