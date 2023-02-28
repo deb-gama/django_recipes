@@ -63,11 +63,15 @@ def login_view(request):
 
 
 def login_create(request):
+    """
+    This view makes the authentication logic and redirect de user for login_view with
+    appropriate messages of success or failed.
+    """
     if not request.POST:
         raise Http404()
 
     form = LoginForm(request.POST)
-    login_url = reverse('authors:login')
+    # login_url = reverse('authors:login')
 
     if form.is_valid():
         authenticated_user = authenticate(
@@ -86,6 +90,9 @@ def login_create(request):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def logout_view(request):
+    """
+    View wich contains the logout logical and messages. Redirect the user back for login view.
+    """
     if not request.POST:
         return redirect(reverse('authors:login'))
 
@@ -96,6 +103,9 @@ def logout_view(request):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def dashboard_view(request):
+    """
+    This view lists the author´s recipes.
+    """
     title = 'Authors | Dashboard'
     recipes = Recipe.objects.filter(
         is_published=False,
@@ -111,6 +121,9 @@ def dashboard_view(request):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def dashboard_recipe_edit(request, recipe_id):
+    """
+    This view makes it possible to edit recipes
+    """
     title = 'Authors | Dashboard Edit Recipe'
     recipe = Recipe.objects.filter(
         is_published=False,
@@ -146,6 +159,9 @@ def dashboard_recipe_edit(request, recipe_id):
 
 @login_required(login_url='authors:login', redirect_field_name='next')
 def dashboard_recipe_create(request):
+    """
+    This view makes it possible to create new recipes
+    """
     title = 'Authors | Dashboard Create Recipe'
     recipe = Recipe()
 
@@ -174,12 +190,15 @@ def dashboard_recipe_create(request):
 
 
 @login_required(login_url='authors:login', redirect_field_name='next')
-def dashboard_recipe_delete(request, recipe_id):
+def dashboard_recipe_delete(request):
+    """
+    This view makes it possible to delete recipes
+    """
     if  not request.POST:
         raise Http404()
 
     POST = request.POST
-    id = POST.get('id')
+    recipe_id = POST.get('id')
 
     recipe = Recipe.objects.filter(
         is_published=False,
