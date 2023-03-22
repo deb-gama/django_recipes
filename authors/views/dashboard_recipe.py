@@ -1,12 +1,20 @@
-from django.views import View
-from django.shortcuts import render, redirect
-from django.http import Http404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.http import Http404
+from django.shortcuts import redirect, render
 from django.urls import reverse
-from recipes.models import Recipe
+from django.utils.decorators import method_decorator
+from django.views import View
+
 from authors.forms import AuthorRecipeForm
+from recipes.models import Recipe
 
 
+#decorating dispatch method of generic View
+@method_decorator(
+    login_required(login_url='authors:login', redirect_field_name=next),
+    name='dispatch'
+ )
 class DashboardRecipe(View):
     def render_recipe(self,form,title,recipe):
         return render(

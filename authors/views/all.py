@@ -1,12 +1,14 @@
-from django.shortcuts import render, redirect
-from django.http import Http404
 from django.contrib import messages
-from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
+from django.shortcuts import redirect, render
+from django.urls import reverse
+
+from authors.forms import (AuthorCreateRecipeForm, AuthorRecipeForm, LoginForm,
+                           RegisterForm)
 from recipes.models import Recipe
 
-from authors.forms import LoginForm, RegisterForm, AuthorRecipeForm, AuthorCreateRecipeForm
 
 def register_view(request):
     """
@@ -193,7 +195,7 @@ def dashboard_recipe_delete(request):
     """
     This view makes it possible to delete recipes
     """
-    if  not request.POST:
+    if not request.POST:
         raise Http404()
 
     POST = request.POST
