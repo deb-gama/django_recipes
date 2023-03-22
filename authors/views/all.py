@@ -159,60 +159,60 @@ def dashboard_view(request):
 #     )
 
 
-@login_required(login_url='authors:login', redirect_field_name='next')
-def dashboard_recipe_create(request):
-    """
-    This view makes it possible to create new recipes
-    """
-    title = 'Authors | Dashboard Create Recipe'
-    recipe = Recipe()
+# @login_required(login_url='authors:login', redirect_field_name='next')
+# def dashboard_recipe_create(request):
+#     """
+#     This view makes it possible to create new recipes
+#     """
+#     title = 'Authors | Dashboard Create Recipe'
+#     recipe = Recipe()
 
-    form =AuthorCreateRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)
+#     form =AuthorCreateRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)
 
-    if form.is_valid():
-        # salvando os dados na variável antes de salvar na base de dados
-        recipe = form.save(commit=False)
+#     if form.is_valid():
+#         # salvando os dados na variável antes de salvar na base de dados
+#         recipe = form.save(commit=False)
 
-        recipe.author = request.user
-        recipe.preparation_step_is_html = False
-        recipe.is_published = False
+#         recipe.author = request.user
+#         recipe.preparation_step_is_html = False
+#         recipe.is_published = False
 
-        # salvando na base de dados após verifcações feitas acima
-        recipe.save()
-        messages.success(request, 'Your recipe was created!')
-        return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe.id,)))
-        # return redirect(reverse('authors:dashboard_recipe_create'))
+#         # salvando na base de dados após verifcações feitas acima
+#         recipe.save()
+#         messages.success(request, 'Your recipe was created!')
+#         return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe.id,)))
+#         # return redirect(reverse('authors:dashboard_recipe_create'))
 
-    return render(request, 'authors/pages/dashboard_recipe_create.html', {
-      'title': title,
-      'form': form,
-      }
-    )
+#     return render(request, 'authors/pages/dashboard_recipe_create.html', {
+#       'title': title,
+#       'form': form,
+#       }
+#     )
 
 
-@login_required(login_url='authors:login', redirect_field_name='next')
-def dashboard_recipe_delete(request):
-    """
-    This view makes it possible to delete recipes
-    """
-    if not request.POST:
-        raise Http404()
+# @login_required(login_url='authors:login', redirect_field_name='next')
+# def dashboard_recipe_delete(request):
+#     """
+#     This view makes it possible to delete recipes
+#     """
+#     if not request.POST:
+#         raise Http404()
 
-    POST = request.POST
-    recipe_id = POST.get('id')
+#     POST = request.POST
+#     recipe_id = POST.get('id')
 
-    recipe = Recipe.objects.filter(
-        is_published=False,
-        author = request.user,
-        pk = recipe_id,
-    ).first()
+#     recipe = Recipe.objects.filter(
+#         is_published=False,
+#         author = request.user,
+#         pk = recipe_id,
+#     ).first()
 
-    if not recipe:
-        raise Http404()
+#     if not recipe:
+#         raise Http404()
 
-    recipe.delete()
-    messages.success(request, 'Deleted successfully')
-    return redirect('authors:dashboard')
+#     recipe.delete()
+#     messages.success(request, 'Deleted successfully')
+#     return redirect('authors:dashboard')
 
 
 
