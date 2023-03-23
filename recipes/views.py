@@ -13,12 +13,45 @@ PER_PAGES = int(os.environ.get('PER_PAGE', 6))
 
 class RecipesListViewBase(ListView):
     model = Recipe
-    context_object_name = 'recipe'
-    paginate_by = 5
+    context_object_name = 'recipes'
+    paginate_by = None
     ordering =  ['-id']
     template_name = 'recipes/pages/home.html'
 
+    def get_queryset(self, *args,**kwargs):
+        query_set = super().get_queryset(*args,**kwargs)
+        query_set = query_set.filter(
+            is_published=True,
+        )
+        return query_set
 
+    def get_context_data(self, *args,**kwargs):
+        context = super().get_context_data(*args,**kwargs)
+
+        page_object, pagination_range = make_pagination(
+            self.request,
+            context.get('recipes'),
+            PER_PAGES
+        )
+
+        context.update(
+            {
+                'recipes': page_object,
+                'pagination_range': pagination_range
+            }
+        )
+
+        return context
+
+
+class RecipesListViewHome(RecipesListViewBase):
+    template_name = 'recipes/pages/home.html'
+
+
+
+
+#These methods below are no longer being used. We refactored the home method using CBV,
+# but this code snippet is still here for teaching purposes only
 def home(request):
     title = 'Home | Recipes'
     recipes = Recipe.objects.filter(is_published=True).order_by('-id')
