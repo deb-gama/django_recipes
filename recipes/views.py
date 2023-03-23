@@ -3,12 +3,20 @@ import os
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_list_or_404, get_object_or_404, render
+from django.views.generic import ListView
 
 from recipes.models import Recipe
 
 from .utils.pagination import make_pagination
 
 PER_PAGES = int(os.environ.get('PER_PAGE', 6))
+
+class RecipesListViewBase(ListView):
+    model = Recipe
+    context_object_name = 'recipe'
+    paginate_by = 5
+    ordering =  ['-id']
+    template_name = 'recipes/pages/home.html'
 
 
 def home(request):
