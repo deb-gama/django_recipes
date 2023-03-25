@@ -89,6 +89,37 @@ class RecipesListCategory(RecipesListViewBase):
 class RecipesListSearch(RecipesListViewBase):
     template_name = 'recipes/pages/search_page.html'
 
+    def get_queryset(self, *args,**kwargs):
+        query_set = super().get_queryset(*args,**kwargs)
+        search_term = self.request.GET.get('q', '').strip()
+
+        if not search_term:
+            raise Http404()
+
+        query_set.filter(
+            Q(
+                Q(title__icontains=search_term) |
+                Q(description__icontains=search_term)
+            ), is_published=True,
+        ).order_by('-id')
+
+        return query_set
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        search_term = self.request.GET.get('q', '').strip()
+        title = f'Search for "{search_term}" | Recipes'
+
+        context.update(
+            {
+                'title': title,
+                'search_term': search_term,
+            }
+        )
+        return context
+
+
+
 
 
 
