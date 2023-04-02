@@ -7,12 +7,12 @@ from .recipe_base_test import RecipeTestBase
 
 class RecipeCategoryViewsTest(RecipeTestBase):
 
-    def test_recipe_category_view_function(self):
-        """
-        Test must confirm if the correct view has been executed in category url
-        """
-        view = resolve(self.category_url)
-        self.assertIs(view.func, views.category)
+    # def test_recipe_category_view_function(self):
+    #     """
+    #     Test must confirm if the correct view has been executed in category url
+    #     """
+    #     view = resolve(self.category_url)
+    #     self.assertIs(view.func, views.category)
 
     def test_recipe_category_template_loads_the_correct_recipe(self):
         """

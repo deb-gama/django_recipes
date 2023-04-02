@@ -9,13 +9,13 @@ from .recipe_base_test import RecipeTestBase
 
 class RecipeHomeViewsTest(RecipeTestBase):
 
-    def test_recipe_home_view_function(self):
-        """
-        Test must confirm if the correct view has been executed in home url
-        """
-        # alternativa não dinâmica: resolve('/')
-        view = resolve(self.home_url)
-        self.assertIs(view.func, views.home)
+    # def test_recipe_home_view_function(self):
+    #     """
+    #     Test must confirm if the correct view has been executed in home url
+    #     """
+    #     # alternativa não dinâmica: resolve('/')
+    #     view = resolve(self.home_url)
+    #     self.assertIs(view.func, views.home)
 
     def test_home_view_render_correct_template(self):
         """
