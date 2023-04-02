@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     "authors.apps.AuthorsConfig",
     # django-rest-framework
     "rest_framework",
-    "tag",
-
 
 ]
 

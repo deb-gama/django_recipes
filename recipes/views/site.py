@@ -7,7 +7,7 @@ from django.views.generic import ListView
 
 from recipes.models import Recipe
 
-from .utils.pagination import make_pagination
+from ..utils.pagination import make_pagination
 
 PER_PAGES = int(os.environ.get('PER_PAGE', 6))
 
@@ -92,7 +92,6 @@ class RecipesListSearch(RecipesListViewBase):
     def get_queryset(self, *args,**kwargs):
         query_set = super().get_queryset(*args,**kwargs)
         search_term = self.request.GET.get('q', '').strip()
-        print('----------tá funcionando?--------')
 
         if not search_term:
             raise Http404()
@@ -103,8 +102,6 @@ class RecipesListSearch(RecipesListViewBase):
                 Q(description__icontains=search_term)
             ), is_published=True,
         ).order_by('-id')
-
-        print(query_set)
 
         return query_set
 
