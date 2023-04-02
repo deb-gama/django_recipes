@@ -38,8 +38,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # apps
     "recipes.apps.RecipesConfig",
     "authors.apps.AuthorsConfig",
+    # django-rest-framework
+    "rest_framework",
+    "tag",
+
 
 ]
 
