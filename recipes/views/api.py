@@ -11,3 +11,10 @@ def recipe_api_list(request):
     serializer = RecipeSerializer(instance=recipes, many=True)
 
     return Response(serializer.data)
+
+@api_view()
+def recipe_api_detail(request, pk):
+    recipes = Recipe.objects.filter(pk=pk).first()
+    serializer = RecipeSerializer(instance=recipes, many=False)
+
+    return Response(serializer.data)

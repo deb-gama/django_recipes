@@ -13,4 +13,5 @@ urlpatterns = [
     ),
     path("recipes/<int:recipe_id>/", views.recipe, name="recipe"),
     path("recipes/api/v1/", views.recipe_api_list, name="recipe_api_v1"),
+    path("recipes/api/v1/<int:pk>", views.recipe_api_detail, name="recipe_api_v1_detail"),
 ]
