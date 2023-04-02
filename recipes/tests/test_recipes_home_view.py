@@ -70,7 +70,7 @@ class RecipeHomeViewsTest(RecipeTestBase):
 
     # TODO criar teste para receita não publicada nas views recipe e category
 
-    @patch('recipes.views.PER_PAGES', new='3')
+    @patch('recipes.views.site.PER_PAGES', new='3')
     def test_recipe_home_is_paginated(self):
 
         for i in range(8):
