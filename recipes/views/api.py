@@ -7,12 +7,26 @@ from django.shortcuts import get_object_or_404
 from recipes.models import Recipe
 from recipes.serializers import RecipeSerializer
 
-@api_view()
+@api_view(http_method_names=['get', 'post'])
 def recipe_api_list(request):
-    recipes = Recipe.objects.get_published()[:10]
-    serializer = RecipeSerializer(instance=recipes, many=True)
+    if request.method == 'GET':
+        recipes = Recipe.objects.get_published()[:10]
+        serializer = RecipeSerializer(instance=recipes, many=True, context={'request':request})
 
-    return Response(serializer.data)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = RecipeSerializer(data=request.data)
+
+        if serializer.is_valid():
+            return Response(
+                serializer.validated_data, status=status.HTTP_201_CREATED
+            )
+        return Response(
+            serializer.errors, status=status.HTTP_400_BAD_REQUEST
+        )
+
+
+
 
 @api_view()
 def recipe_api_detail(request, pk):
