@@ -12,18 +12,18 @@ def recipe_api_list(request):
     if request.method == 'GET':
         recipes = Recipe.objects.get_published()[:10]
         serializer = RecipeSerializer(instance=recipes, many=True, context={'request':request})
+        serializer.save()
 
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = RecipeSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
 
-        if serializer.is_valid():
-            return Response(
-                serializer.validated_data, status=status.HTTP_201_CREATED
-            )
         return Response(
-            serializer.errors, status=status.HTTP_400_BAD_REQUEST
+            serializer.validated_data, status=status.HTTP_201_CREATED
         )
+
 
 
 
