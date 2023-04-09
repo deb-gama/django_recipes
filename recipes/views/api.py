@@ -22,7 +22,7 @@ def recipe_api_list(request):
         serializer = RecipeSerializer(data=request.data, context={'request':request})
         serializer.is_valid(raise_exception=True)
         serializer.save(
-            author_id=1, category_id=1
+            # author_id=1, category_id=1
         )
 
         return Response(
@@ -37,12 +37,38 @@ def recipe_api_detail(request, pk):
     View that container all the methods that needs a ph to be finished. Read,
     delete or update an specific recipe.
     """
-    recipe = Recipe.objects.get_published().filter(pk=pk).first()
 
-    if recipe:
-        serializer = RecipeSerializer(instance=recipe, many=False)
+    recipe = get_object_or_404(Recipe.objects.get_published(), pk=pk)
+    if request.method == 'GET':
+        serializer = RecipeSerializer(
+            instance=recipe,
+            many=False,
+            context={'request':request},
+            partial = True
+        )
         return Response(serializer.data)
-    else:
-        return Response({
-            'detail': 'Sorry. This recipe don´t exist. Try another id.'
-        }, status= status.HTTP_404_NOT_FOUND)
+
+    elif request.method == 'PATCH':
+        serializer = RecipeSerializer(
+            instance=recipe,
+            data = request.data,
+            many=False,
+            context={'request':request},
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(
+            serializer.data,
+        )
+
+    elif request.method == 'DELETE':
+        recipe.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
+    # else:
+    #     return Response({
+    #         'detail': 'Sorry. This recipe don´t exist. Try another id.'
+    #     }, status= status.HTTP_404_NOT_FOUND)
