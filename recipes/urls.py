@@ -12,6 +12,6 @@ urlpatterns = [
         views.RecipesListCategory.as_view(), name="category"
     ),
     path("recipes/<int:recipe_id>/", views.recipe, name="recipe"),
-    path("recipes/api/v1/", views.recipe_api_list, name="recipe_api_v1"),
-    path("recipes/api/v1/<int:pk>", views.recipe_api_detail, name="recipe_api_v1_detail"),
+    path("recipes/api/v1/", views.RecipesAPIv1List.as_view(), name="recipe_api_v1"),
+    path("recipes/api/v1/<int:pk>", views.RecipeAPIv1Detail.as_view(), name="recipe_api_v1_detail"),
 ]
