@@ -1,8 +1,10 @@
+import string
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db import models
 from django.db.models import F, Value
 from django.db.models.functions import Concat
+from random import choices, SystemRandom
 
 
 class Category(models.Model):
@@ -54,8 +56,12 @@ class Recipe(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            slug = f'{slugify(self.title)}'
-            self.slug = slug
+            rand_letters = ''.join(
+                SystemRandom().choices(
+                    string.ascii_letters + string.digits
+                )
+            )
+            self.slug = slugify(f'{self.title}-{rand_letters}')
 
         return super().save(*args, **kwargs)
 
