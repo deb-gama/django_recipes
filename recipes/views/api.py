@@ -4,10 +4,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.generics import ListCreateAPIView, ListAPIView
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
 from django.shortcuts import get_object_or_404
 from recipes.models import Recipe
 from recipes.serializers import RecipeSerializer
 
+
+class RecipeAPIv1Pagination(PageNumberPagination):
+    page_size = 3
 
 class RecipesAPIv1List(ListCreateAPIView):
     """
@@ -16,23 +20,7 @@ class RecipesAPIv1List(ListCreateAPIView):
     """
     queryset = Recipe.objects.get_published()
     serializer_class = RecipeSerializer
-    # def get(self, request):
-    #     recipes = Recipe.objects.get_published()[:10]
-    #     serializer = RecipeSerializer(instance=recipes, many=True, context={'request':request})
-
-    #     return Response(serializer.data)
-
-    # def post(self, request):
-    #     serializer = RecipeSerializer(data=request.data, context={'request':request})
-    #     serializer.is_valid(raise_exception=True)
-    #     serializer.save(
-    #         # author_id=1, category_id=1
-    #     )
-
-    #     return Response(
-    #         serializer.data, status=status.HTTP_201_CREATED
-    #     )
-
+    pagination_class = RecipeAPIv1Pagination
 
 class RecipeAPIv1Detail(APIView):
     def get_recipe(self, pk):
