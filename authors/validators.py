@@ -41,8 +41,6 @@ class AuthorCreateRecipeValidator:
         self.clean_servings()
         self.clean_preparation_time()
 
-        super_clean = super().clean(*args, **kwargs)
-
         cleaned_data = self.data
         title = cleaned_data.get('title')
         description = cleaned_data.get('description')
@@ -56,7 +54,6 @@ class AuthorCreateRecipeValidator:
         if self.errors:
             raise self.error_class(self.errors)
 
-        return super_clean
 
 
     def clean_title(self):
