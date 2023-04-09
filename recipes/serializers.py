@@ -6,7 +6,9 @@ from authors.validators import AuthorCreateRecipeValidator
 class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model =Recipe
-        fields = ['id','title','description','category_name','author', 'public']
+        fields = [
+            'id','title','description','category_name','author', 'public', 'preparation_time','preperation_time_unit', 'servings', 'servings_unit', 'preparation_step', 'cover'
+        ]
 
     category_name = serializers.StringRelatedField(source='category')
     public = serializers.BooleanField(
