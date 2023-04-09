@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from recipes.models import Recipe
+from authors.validators import AuthorCreateRecipeValidator
 
 class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,24 +16,10 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         super_validate = super().validate(attrs)
-        title = attrs.get('title')
-        description = attrs.get('description')
-
-        if title == description:
-            raise serializers.ValidationError(
-                {
-                "title": ["Cannot be equal to description", "Please give another title"],
-                "description": ["Cannot be equal to title", "Please try another description"]
-                }
-            )
+        AuthorCreateRecipeValidator(data=attrs, error_class=serializers.ValidationError)
 
         return super_validate
 
 
-    def validate_title(self, value):
-        title = value
 
-        if len(title) < 5:
-            raise serializers.ValidationError('Must have at least 5 chars.')
-        return title
 
