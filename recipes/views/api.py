@@ -1,4 +1,4 @@
-# from django.http import HttpResponse
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -12,7 +12,7 @@ def recipe_api_list(request):
     if request.method == 'GET':
         recipes = Recipe.objects.get_published()[:10]
         serializer = RecipeSerializer(instance=recipes, many=True, context={'request':request})
-        serializer.save()
+        # serializer.save()
 
         return Response(serializer.data)
     elif request.method == 'POST':
@@ -23,8 +23,6 @@ def recipe_api_list(request):
         return Response(
             serializer.validated_data, status=status.HTTP_201_CREATED
         )
-
-
 
 
 

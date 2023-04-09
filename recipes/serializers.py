@@ -1,4 +1,3 @@
-from collections import defaultdict
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from recipes.models import Recipe
