@@ -37,14 +37,13 @@ def recipe_api_detail(request, pk):
     View that container all the methods that needs a ph to be finished. Read,
     delete or update an specific recipe.
     """
-
     recipe = get_object_or_404(Recipe.objects.get_published(), pk=pk)
+
     if request.method == 'GET':
         serializer = RecipeSerializer(
             instance=recipe,
             many=False,
             context={'request':request},
-            partial = True
         )
         return Response(serializer.data)
 
@@ -54,6 +53,7 @@ def recipe_api_detail(request, pk):
             data = request.data,
             many=False,
             context={'request':request},
+            partial = True,
         )
         serializer.is_valid(raise_exception=True)
         serializer.save()
