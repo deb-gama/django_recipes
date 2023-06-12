@@ -680,14 +680,6 @@
         "documentation": {}
     },
     {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "get_list_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -988,46 +980,6 @@
         "documentation": {}
     },
     {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "ListCreateAPIView",
-        "importPath": "rest_framework.generics",
-        "description": "rest_framework.generics",
-        "isExtraImport": true,
-        "detail": "rest_framework.generics",
-        "documentation": {}
-    },
-    {
-        "label": "RetrieveUpdateDestroyAPIView",
-        "importPath": "rest_framework.generics",
-        "description": "rest_framework.generics",
-        "isExtraImport": true,
-        "detail": "rest_framework.generics",
-        "documentation": {}
-    },
-    {
         "label": "PageNumberPagination",
         "importPath": "rest_framework.pagination",
         "description": "rest_framework.pagination",
@@ -1122,6 +1074,22 @@
         "description": "django.db.models.functions",
         "isExtraImport": true,
         "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
         "documentation": {}
     },
     {
@@ -1802,7 +1770,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n# This code block was replaced by ViewSet for avoid duplication\n# class RecipesAPIv1List(ListCreateAPIView):\n#     \"\"\"\n#     View that contains the get and post methods and have the same url without a pk in it.",
+        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():",
         "detail": "recipes.views.api",
         "documentation": {}
     },
@@ -1811,7 +1779,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n# This code block was replaced by ViewSet for avoid duplication\n# class RecipesAPIv1List(ListCreateAPIView):\n#     \"\"\"\n#     View that contains the get and post methods and have the same url without a pk in it.\n#     The 'get' method list recipes and the 'post' method create a new recipe.\n#     \"\"\"",
+        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():\n            queryset = queryset.filter(category_id=category_id)\n        return queryset",
         "detail": "recipes.views.api",
         "documentation": {}
     },
@@ -1964,7 +1932,16 @@
         "kind": 5,
         "importPath": "recipes.urls",
         "description": "recipes.urls",
-        "peekOfCode": "app_name = 'recipes'\nurlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    path(\"recipes/api/v1/\", views.RecipeAPIv1ViewSet.as_view(",
+        "peekOfCode": "app_name = 'recipes'\nrecipes_api_v1_router = SimpleRouter()\nrecipes_api_v1_router.register(\n    'recipes/api/v1', views.RecipeAPIv1ViewSet,\n)\nurlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",",
+        "detail": "recipes.urls",
+        "documentation": {}
+    },
+    {
+        "label": "recipes_api_v1_router",
+        "kind": 5,
+        "importPath": "recipes.urls",
+        "description": "recipes.urls",
+        "peekOfCode": "recipes_api_v1_router = SimpleRouter()\nrecipes_api_v1_router.register(\n    'recipes/api/v1', views.RecipeAPIv1ViewSet,\n)\nurlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"",
         "detail": "recipes.urls",
         "documentation": {}
     },
@@ -1973,7 +1950,7 @@
         "kind": 5,
         "importPath": "recipes.urls",
         "description": "recipes.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    path(\"recipes/api/v1/\", views.RecipeAPIv1ViewSet.as_view(\n        {'get': 'list',",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    # This code block was replaced by simpleRouter definitions that create the detail and list urls\n    # automactilly",
         "detail": "recipes.urls",
         "documentation": {}
     },

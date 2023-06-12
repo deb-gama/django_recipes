@@ -1,9 +1,9 @@
 
-from django.shortcuts import get_object_or_404
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.generics import (ListCreateAPIView,
-                                     RetrieveUpdateDestroyAPIView)
+# from django.shortcuts import get_object_or_404
+# from rest_framework import status
+# from rest_framework.decorators import api_view
+# from rest_framework.generics import (ListCreateAPIView,
+#                                      RetrieveUpdateDestroyAPIView)
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -21,6 +21,15 @@ class RecipeAPIv1ViewSet(ModelViewSet):
     queryset = Recipe.objects.get_published()
     serializer_class = RecipeSerializer
     pagination_class = RecipeAPIv1Pagination
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category_id = self.request.query_params.get('category_id', '')
+
+        if category_id != '' and category_id.isnumeric():
+            queryset = queryset.filter(category_id=category_id)
+
+        return queryset
 
 
 # This code block was replaced by ViewSet for avoid duplication
