@@ -608,6 +608,22 @@
         "documentation": {}
     },
     {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "login_required",
         "importPath": "django.contrib.auth.decorators",
         "description": "django.contrib.auth.decorators",
@@ -712,6 +728,62 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticatedOrReadOnly",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "ModelSerializer",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ModelSerializer",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ReadOnlyModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
         "label": "method_decorator",
         "importPath": "django.utils.decorators",
         "description": "django.utils.decorators",
@@ -789,6 +861,22 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
         "documentation": {}
     },
     {
@@ -1028,14 +1116,6 @@
         "documentation": {}
     },
     {
-        "label": "IsAuthenticatedOrReadOnly",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -1049,14 +1129,6 @@
         "description": "rest_framework.views",
         "isExtraImport": true,
         "detail": "rest_framework.views",
-        "documentation": {}
-    },
-    {
-        "label": "ModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
         "documentation": {}
     },
     {
@@ -1130,14 +1202,6 @@
         "description": "django.db.models.functions",
         "isExtraImport": true,
         "detail": "django.db.models.functions",
-        "documentation": {}
-    },
-    {
-        "label": "SimpleRouter",
-        "importPath": "rest_framework.routers",
-        "description": "rest_framework.routers",
-        "isExtraImport": true,
-        "detail": "rest_framework.routers",
         "documentation": {}
     },
     {
@@ -1379,6 +1443,15 @@
         "documentation": {}
     },
     {
+        "label": "AuthorViewSet",
+        "kind": 6,
+        "importPath": "authors.views.api",
+        "description": "authors.views.api",
+        "peekOfCode": "class AuthorViewSet(ReadOnlyModelViewSet):\n    serializer_class = AuthorSerializer\n    permission_classes = [IsAuthenticated,]\n    http_method_names = ['get']\n    def get_queryset(self):\n        user = get_user_model()\n        queryset = user.objects.filter(username=self.request.user.username)\n        return queryset",
+        "detail": "authors.views.api",
+        "documentation": {}
+    },
+    {
         "label": "DashboardRecipe",
         "kind": 6,
         "importPath": "authors.views.dashboard_recipe",
@@ -1406,11 +1479,29 @@
         "documentation": {}
     },
     {
+        "label": "AuthorSerializer",
+        "kind": 6,
+        "importPath": "authors.serializers",
+        "description": "authors.serializers",
+        "peekOfCode": "class AuthorSerializer(ModelSerializer):\n    class Meta:\n        model = get_user_model()\n        fields = ['id', 'username', 'first_name', 'email', 'last_name']",
+        "detail": "authors.serializers",
+        "documentation": {}
+    },
+    {
         "label": "app_name",
         "kind": 5,
         "importPath": "authors.urls",
         "description": "authors.urls",
-        "peekOfCode": "app_name = 'authors'\nurlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(), name='dashboard_recipe_create'),\n    path('dashboard/recipe/delete/', views.DashboardRecipeDelete.as_view(), name='dashboard_recipe_delete'),",
+        "peekOfCode": "app_name = 'authors'\nauthor_api_router = SimpleRouter()\nauthor_api_router.register('api', views.AuthorViewSet, basename='author-api')\nurlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),",
+        "detail": "authors.urls",
+        "documentation": {}
+    },
+    {
+        "label": "author_api_router",
+        "kind": 5,
+        "importPath": "authors.urls",
+        "description": "authors.urls",
+        "peekOfCode": "author_api_router = SimpleRouter()\nauthor_api_router.register('api', views.AuthorViewSet, basename='author-api')\nurlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(),",
         "detail": "authors.urls",
         "documentation": {}
     },
@@ -1419,7 +1510,7 @@
         "kind": 5,
         "importPath": "authors.urls",
         "description": "authors.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(), name='dashboard_recipe_create'),\n    path('dashboard/recipe/delete/', views.DashboardRecipeDelete.as_view(), name='dashboard_recipe_delete'),\n    path('dashboard/recipe/<int:recipe_id>/edit/', views.DashboardRecipe.as_view(), name='dashboard_recipe_edit'),",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(),\n         name='dashboard_recipe_create'),\n    path('dashboard/recipe/delete/', views.DashboardRecipeDelete.as_view(),",
         "detail": "authors.urls",
         "documentation": {}
     },
@@ -1851,7 +1942,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')",
+        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    http_method_names = ['get', 'options', 'head', 'patch', 'post', 'delete']\n    def get_queryset(self):\n        queryset = super().get_queryset()",
         "detail": "recipes.views.api",
         "documentation": {}
     },
@@ -1860,7 +1951,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():\n            queryset = queryset.filter(category_id=category_id)",
+        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    http_method_names = ['get', 'options', 'head', 'patch', 'post', 'delete']\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():",
         "detail": "recipes.views.api",
         "documentation": {}
     },
