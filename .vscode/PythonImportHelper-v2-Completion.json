@@ -1788,7 +1788,7 @@
         "kind": 6,
         "importPath": "recipes.views.site",
         "description": "recipes.views.site",
-        "peekOfCode": "class RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering =  ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set = query_set.filter(\n            is_published=True,",
+        "peekOfCode": "class RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering = ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args, **kwargs):\n        query_set = super().get_queryset(*args, **kwargs)\n        query_set = query_set.filter(\n            is_published=True,",
         "detail": "recipes.views.site",
         "documentation": {}
     },
@@ -1806,7 +1806,7 @@
         "kind": 6,
         "importPath": "recipes.views.site",
         "description": "recipes.views.site",
-        "peekOfCode": "class RecipesListCategory(RecipesListViewBase):\n    template_name = 'recipes/pages/category.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set.filter(\n            category__id=self.kwargs.get('category_id')\n        )\n        return query_set\n    def get_context_data(self, *args, **kwargs):\n        context = super().get_context_data(*args, **kwargs)",
+        "peekOfCode": "class RecipesListCategory(RecipesListViewBase):\n    template_name = 'recipes/pages/category.html'\n    def get_queryset(self, *args, **kwargs):\n        query_set = super().get_queryset(*args, **kwargs)\n        query_set.filter(\n            category__id=self.kwargs.get('category_id')\n        )\n        return query_set\n    def get_context_data(self, *args, **kwargs):\n        context = super().get_context_data(*args, **kwargs)",
         "detail": "recipes.views.site",
         "documentation": {}
     },
@@ -1815,16 +1815,7 @@
         "kind": 6,
         "importPath": "recipes.views.site",
         "description": "recipes.views.site",
-        "peekOfCode": "class RecipesListSearch(RecipesListViewBase):\n    template_name = 'recipes/pages/search_page.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        search_term = self.request.GET.get('q', '').strip()\n        if not search_term:\n            raise Http404()\n        query_set.filter(\n            Q(\n                Q(title__icontains=search_term) |",
-        "detail": "recipes.views.site",
-        "documentation": {}
-    },
-    {
-        "label": "home",
-        "kind": 2,
-        "importPath": "recipes.views.site",
-        "description": "recipes.views.site",
-        "peekOfCode": "def home(request):\n    title = 'Home | Recipes'\n    recipes = Recipe.objects.filter(is_published=True).order_by('-id')\n    page_object, pagination_range = make_pagination(\n        request, recipes, PER_PAGES)\n    return render(\n        request,\n        'recipes/pages/home.html',\n        context={'title': title, 'recipes': page_object,\n                 'pagination_range': pagination_range}",
+        "peekOfCode": "class RecipesListSearch(RecipesListViewBase):\n    template_name = 'recipes/pages/search_page.html'\n    def get_queryset(self, *args, **kwargs):\n        query_set = super().get_queryset(*args, **kwargs)\n        search_term = self.request.GET.get('q', '').strip()\n        if not search_term:\n            raise Http404()\n        query_set.filter(\n            Q(\n                Q(title__icontains=search_term) |",
         "detail": "recipes.views.site",
         "documentation": {}
     },
@@ -1833,25 +1824,7 @@
         "kind": 2,
         "importPath": "recipes.views.site",
         "description": "recipes.views.site",
-        "peekOfCode": "def recipe(request, recipe_id):\n    recipe = get_object_or_404(Recipe, pk=recipe_id, is_published=True)\n    title = f\"{recipe.title} | Recipes'\"\n    return render(\n        request,\n        'recipes/pages/recipe_detail.html',\n        context={'title': title, 'recipe': recipe, 'is_detail_page': True}\n    )\ndef category(request, category_id):\n    recipes = get_list_or_404(Recipe.objects.filter(",
-        "detail": "recipes.views.site",
-        "documentation": {}
-    },
-    {
-        "label": "category",
-        "kind": 2,
-        "importPath": "recipes.views.site",
-        "description": "recipes.views.site",
-        "peekOfCode": "def category(request, category_id):\n    recipes = get_list_or_404(Recipe.objects.filter(\n        category__id=category_id).order_by('-id'))\n    title = f\"{recipes[0].category.name} - Category | Recipes\"\n    page_object, pagination_range = make_pagination(\n        request, recipes, PER_PAGES)\n    return render(\n        request,\n        'recipes/pages/category.html',\n        context={'title': title, 'recipes': page_object,",
-        "detail": "recipes.views.site",
-        "documentation": {}
-    },
-    {
-        "label": "search",
-        "kind": 2,
-        "importPath": "recipes.views.site",
-        "description": "recipes.views.site",
-        "peekOfCode": "def search(request):\n    # strip tira espaços da string\n    search_term = request.GET.get('q', '').strip()\n    title = f'Search for \"{search_term}\" | Recipes'\n    if not search_term:\n        raise Http404()\n    recipes = Recipe.objects.filter(\n        Q(Q(title__icontains=search_term) | Q(\n            description__icontains=search_term)), is_published=True,\n    ).order_by('-id')",
+        "peekOfCode": "def recipe(request, recipe_id):\n    recipe = get_object_or_404(Recipe, pk=recipe_id, is_published=True)\n    title = f\"{recipe.title} | Recipes'\"\n    return render(\n        request,\n        'recipes/pages/recipe_detail.html',\n        context={'title': title, 'recipe': recipe, 'is_detail_page': True}\n    )\n# def category(request, category_id):\n#     recipes = get_list_or_404(Recipe.objects.filter(",
         "detail": "recipes.views.site",
         "documentation": {}
     },
@@ -1860,7 +1833,7 @@
         "kind": 5,
         "importPath": "recipes.views.site",
         "description": "recipes.views.site",
-        "peekOfCode": "PER_PAGES = int(os.environ.get('PER_PAGE', 6))\nclass RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering =  ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set = query_set.filter(",
+        "peekOfCode": "PER_PAGES = int(os.environ.get('PER_PAGE', 6))\nclass RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering = ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args, **kwargs):\n        query_set = super().get_queryset(*args, **kwargs)\n        query_set = query_set.filter(",
         "detail": "recipes.views.site",
         "documentation": {}
     },
