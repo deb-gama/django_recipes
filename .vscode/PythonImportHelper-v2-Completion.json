@@ -825,6 +825,14 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -1090,6 +1098,30 @@
         "description": "rest_framework.routers",
         "isExtraImport": true,
         "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenVerifyView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
         "documentation": {}
     },
     {
@@ -1545,7 +1577,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1554,7 +1586,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "peekOfCode": "DEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    )",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1563,7 +1595,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "peekOfCode": "INTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    )\n}\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=60),",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1572,7 +1604,16 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    )\n}\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=60),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=60),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": False,\n    \"BLACKLIST_AFTER_ROTATION\": False,\n    \"SIGNING_KEY\": os.environ.get('SECRET_KEY_JWT', 'INSECURE'),\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n    # \"UPDATE_LAST_LOGIN\": False,\n    # \"ALGORITHM\": \"HS256\",\n    # \"VERIFYING_KEY\": \"\",",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1923,7 +1964,7 @@
         "kind": 5,
         "importPath": "recipes.urls",
         "description": "recipes.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    # This code block was replaced by simpleRouter definitions that create the detail and list urls\n    # automactilly",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    path('recipes/api/token/', TokenObtainPairView.as_view(),\n         name='token_obtain_pair'),",
         "detail": "recipes.urls",
         "documentation": {}
     },

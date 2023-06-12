@@ -1,5 +1,7 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
+from rest_framework_simplejwt.views import (TokenObtainPairView,
+                                            TokenRefreshView, TokenVerifyView)
 
 from recipes import views
 
@@ -18,6 +20,10 @@ urlpatterns = [
         views.RecipesListCategory.as_view(), name="category"
     ),
     path("recipes/<int:recipe_id>/", views.recipe, name="recipe"),
+    path('recipes/api/token/', TokenObtainPairView.as_view(),
+         name='token_obtain_pair'),
+    path('recipes/api/token/refresh/',
+         TokenRefreshView.as_view(), name='token_refresh'),
 
     # This code block was replaced by simpleRouter definitions that create the detail and list urls
     # automactilly
