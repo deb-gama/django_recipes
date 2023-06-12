@@ -1,0 +1,2070 @@
+[
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "add_placeholder",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "add_attr",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "add_attr",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "add_placeholder",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "strong_password",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "add_attr",
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "isExtraImport": true,
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "isExtraImport": true,
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "is_positive_number",
+        "importPath": "recipes.utils.strings",
+        "description": "recipes.utils.strings",
+        "isExtraImport": true,
+        "detail": "recipes.utils.strings",
+        "documentation": {}
+    },
+    {
+        "label": "is_positive_number",
+        "importPath": "recipes.utils.strings",
+        "description": "recipes.utils.strings",
+        "isExtraImport": true,
+        "detail": "recipes.utils.strings",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeValidator",
+        "importPath": "authors.validators",
+        "description": "authors.validators",
+        "isExtraImport": true,
+        "detail": "authors.validators",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeValidator",
+        "importPath": "authors.validators",
+        "description": "authors.validators",
+        "isExtraImport": true,
+        "detail": "authors.validators",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "unittest",
+        "description": "unittest",
+        "isExtraImport": true,
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "parameterized",
+        "importPath": "parameterized",
+        "description": "parameterized",
+        "isExtraImport": true,
+        "detail": "parameterized",
+        "documentation": {}
+    },
+    {
+        "label": "parameterized",
+        "importPath": "parameterized",
+        "description": "parameterized",
+        "isExtraImport": true,
+        "detail": "parameterized",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorRecipeForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorRecipeForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeForm",
+        "importPath": "authors.forms",
+        "description": "authors.forms",
+        "isExtraImport": true,
+        "detail": "authors.forms",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_list_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "importPath": "recipes.views",
+        "description": "recipes.views",
+        "isExtraImport": true,
+        "detail": "recipes.views",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "importPath": "recipes.views",
+        "description": "recipes.views",
+        "isExtraImport": true,
+        "detail": "recipes.views",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "importPath": "recipes.views",
+        "description": "recipes.views",
+        "isExtraImport": true,
+        "detail": "recipes.views",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "importPath": "recipes.views",
+        "description": "recipes.views",
+        "isExtraImport": true,
+        "detail": "recipes.views",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "choices",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "SystemRandom",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination_range",
+        "importPath": "recipes.utils.pagination",
+        "description": "recipes.utils.pagination",
+        "isExtraImport": true,
+        "detail": "recipes.utils.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "ListCreateAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveUpdateDestroyAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "importPath": "recipes.serializers",
+        "description": "recipes.serializers",
+        "isExtraImport": true,
+        "detail": "recipes.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Value",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "Concat",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "recipes",
+        "description": "recipes",
+        "isExtraImport": true,
+        "detail": "recipes",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "pkgutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pkgutil",
+        "description": "pkgutil",
+        "detail": "pkgutil",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "b85decode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "authors.forms.login",
+        "description": "authors.forms.login",
+        "peekOfCode": "class LoginForm(forms.Form):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        add_placeholder(self.fields['username'], 'Type your username')\n        add_placeholder(self.fields['password'], 'Type your password')\n    username = forms.CharField()\n    password = forms.CharField(widget= forms.PasswordInput())",
+        "detail": "authors.forms.login",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeForm",
+        "kind": 6,
+        "importPath": "authors.forms.recipe_create_form",
+        "description": "authors.forms.recipe_create_form",
+        "peekOfCode": "class AuthorCreateRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self._recipe_create_errors = defaultdict(list)\n        add_attr(self.fields.get('preparation_step'), 'class', 'span-2')\n        add_attr(self.fields.get('cover'), 'class', 'span-2')\n    class Meta:\n        model = Recipe\n        fields = 'title','description','preparation_time','preperation_time_unit', 'servings', 'servings_unit','category', 'slug','preparation_step', 'cover'\n        widgets = {",
+        "detail": "authors.forms.recipe_create_form",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorRecipeForm",
+        "kind": 6,
+        "importPath": "authors.forms.recipe_form",
+        "description": "authors.forms.recipe_form",
+        "peekOfCode": "class AuthorRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        add_attr(self.fields.get('preparation_step'), 'class', 'span-2')\n        add_attr(self.fields.get('cover'), 'class', 'span-2')\n    class Meta:\n        model = Recipe\n        fields = 'title','description', 'preparation_time','preperation_time_unit', 'servings', 'servings_unit', 'preparation_step', 'cover'\n        widgets = {\n            'cover': forms.FileInput(",
+        "detail": "authors.forms.recipe_form",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "kind": 6,
+        "importPath": "authors.forms.register",
+        "description": "authors.forms.register",
+        "peekOfCode": "class RegisterForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        add_placeholder(self.fields['username'], 'Your username')\n        add_placeholder(self.fields['email'], 'Ex: your_best_email@email.com')\n        add_placeholder(self.fields['first_name'], 'Ex: John / Jane')\n        add_placeholder(self.fields['last_name'], 'Ex: Doe')\n    first_name = forms.CharField(\n        error_messages={'required': 'Type your First Name'},\n        required=True,",
+        "detail": "authors.forms.register",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorRegisterFormUnitTest",
+        "kind": 6,
+        "importPath": "authors.tests.test_author_register_form",
+        "description": "authors.tests.test_author_register_form",
+        "peekOfCode": "class AuthorRegisterFormUnitTest(TestCase):\n    @parameterized.expand([\n        ('username', 'Your username'),\n        ('email', 'Ex: your_best_email@email.com'),\n        ('first_name', 'Ex: John / Jane'),\n        ('last_name', 'Ex: Doe'),\n        ('password', 'Your password'),\n        ('confirm_password', 'Confirm your password'),\n    ])\n    def test_fields_placeholders(self, field, placeholder):",
+        "detail": "authors.tests.test_author_register_form",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorRegisterFormIntegrationTest",
+        "kind": 6,
+        "importPath": "authors.tests.test_author_register_form",
+        "description": "authors.tests.test_author_register_form",
+        "peekOfCode": "class AuthorRegisterFormIntegrationTest(DjangoTestCase):\n    def setUp(self) -> None:\n        self.form_data = {\n            'username': 'user',\n            'first_name': 'First',\n            'last_name': 'Last',\n            'email': 'mail@mail.com',\n            'password': 'StrongP@ssword1',\n            'confirm_password': 'StrongP@ssword1'\n        }",
+        "detail": "authors.tests.test_author_register_form",
+        "documentation": {}
+    },
+    {
+        "label": "register_view",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def register_view(request):\n    \"\"\"\n    This view is responsible for rendering an empty form when in GET mode and\n    receiving the register_form_data in the register redirection  create view.\n    \"\"\"\n    title = 'Auhors | Register'\n    register_form_data = request.session.get('register_form_data', None)\n    form = RegisterForm(register_form_data)\n    return render(\n        request,",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "register_create",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def register_create(request):\n    \"\"\"\n    This view will log the new user or throw an error if something is wrong.\n    Redirect to register_view to disallow resubmit of the form.\n    \"\"\"\n    if  not request.POST:\n        raise Http404()\n    POST = request.POST\n    request.session['register_form_data'] = POST\n    form = RegisterForm(POST)",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "login_view",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def login_view(request):\n    title = 'Auhors | Login'\n    form = LoginForm()\n    return render(request, 'authors/pages/login.html', {\n        'title': title,\n        'form': form,\n        'form_action': reverse('authors:login_create')\n        }\n    )\ndef login_create(request):",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "login_create",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def login_create(request):\n    \"\"\"\n    This view makes the authentication logic and redirect de user for login_view with\n    appropriate messages of success or failed.\n    \"\"\"\n    if not request.POST:\n        raise Http404()\n    form = LoginForm(request.POST)\n    # login_url = reverse('authors:login')\n    if form.is_valid():",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "logout_view",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def logout_view(request):\n    \"\"\"\n    View wich contains the logout logical and messages. Redirect the user back for login view.\n    \"\"\"\n    if not request.POST:\n        return redirect(reverse('authors:login'))\n    messages.success(request, 'Logged out successfully')\n    logout(request)\n    return redirect(reverse('authors:login'))\n@login_required(login_url='authors:login', redirect_field_name='next')",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_view",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def dashboard_view(request):\n    \"\"\"\n    This view lists the author´s recipes.\n    \"\"\"\n    title = 'Authors | Dashboard'\n    recipes = Recipe.objects.filter(\n        is_published=False,\n        author = request.user,\n    )\n    return render(request, 'authors/pages/dashboard.html', {",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_recipe_edit",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def dashboard_recipe_edit(request, recipe_id):\n    \"\"\"\n    This view makes it possible to edit recipes\n    \"\"\"\n    title = 'Authors | Dashboard Edit Recipe'\n    recipe = Recipe.objects.filter(\n        is_published=False,\n        author = request.user,\n        pk = recipe_id,\n    ).first()",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_recipe_create",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def dashboard_recipe_create(request):\n    \"\"\"\n    This view makes it possible to create new recipes\n    \"\"\"\n    title = 'Authors | Dashboard Create Recipe'\n    recipe = Recipe()\n    form =AuthorCreateRecipeForm(request.POST or None,files=request.FILES or None, instance=recipe)\n    if form.is_valid():\n        # salvando os dados na variável antes de salvar na base de dados\n        recipe = form.save(commit=False)",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_recipe_delete",
+        "kind": 2,
+        "importPath": "authors.views.all",
+        "description": "authors.views.all",
+        "peekOfCode": "def dashboard_recipe_delete(request):\n    \"\"\"\n    This view makes it possible to delete recipes\n    \"\"\"\n    if not request.POST:\n        raise Http404()\n    POST = request.POST\n    recipe_id = POST.get('id')\n    recipe = Recipe.objects.filter(\n        is_published=False,",
+        "detail": "authors.views.all",
+        "documentation": {}
+    },
+    {
+        "label": "DashboardRecipe",
+        "kind": 6,
+        "importPath": "authors.views.dashboard_recipe",
+        "description": "authors.views.dashboard_recipe",
+        "peekOfCode": "class DashboardRecipe(View):\n    def render_recipe(self,form,title,recipe):\n        return render(\n            self.request,\n            'authors/pages/dashboard_recipe.html',\n            context= {\n                'title': title,\n                'recipe': recipe,\n                'form': form,\n            }",
+        "detail": "authors.views.dashboard_recipe",
+        "documentation": {}
+    },
+    {
+        "label": "DashboardRecipeDelete",
+        "kind": 6,
+        "importPath": "authors.views.dashboard_recipe",
+        "description": "authors.views.dashboard_recipe",
+        "peekOfCode": "class DashboardRecipeDelete(DashboardRecipe):\n    def post(self, *args, **kwargs):\n        recipe = self.get_recipe(self.request.POST.get('id'))\n        recipe.delete()\n        messages.success(self.request, 'Deleted successfully')\n        return redirect('authors:dashboard')",
+        "detail": "authors.views.dashboard_recipe",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorsConfig",
+        "kind": 6,
+        "importPath": "authors.apps",
+        "description": "authors.apps",
+        "peekOfCode": "class AuthorsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"authors\"",
+        "detail": "authors.apps",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "authors.urls",
+        "description": "authors.urls",
+        "peekOfCode": "app_name = 'authors'\nurlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(), name='dashboard_recipe_create'),\n    path('dashboard/recipe/delete/', views.DashboardRecipeDelete.as_view(), name='dashboard_recipe_delete'),",
+        "detail": "authors.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "authors.urls",
+        "description": "authors.urls",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register_view, name='register'),\n    path('register/create/', views.register_create, name='register_create'),\n    path('login/', views.login_view, name='login'),\n    path('login/create/', views.login_create, name='login_create'),\n    path('logout/', views.logout_view, name='logout'),\n    path('dashboard/', views.dashboard_view, name='dashboard'),\n    path('dashboard/recipe/create', views.DashboardRecipe.as_view(), name='dashboard_recipe_create'),\n    path('dashboard/recipe/delete/', views.DashboardRecipeDelete.as_view(), name='dashboard_recipe_delete'),\n    path('dashboard/recipe/<int:recipe_id>/edit/', views.DashboardRecipe.as_view(), name='dashboard_recipe_edit'),",
+        "detail": "authors.urls",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorCreateRecipeValidator",
+        "kind": 6,
+        "importPath": "authors.validators",
+        "description": "authors.validators",
+        "peekOfCode": "class AuthorCreateRecipeValidator:\n    def __init__(self, data, errors=None, error_class=None):\n        self.errors = defaultdict(list) if errors is None else errors\n        self.error_class = ValidationError if error_class is None else error_class\n        self.data = data\n        self.clean()\n        model = Recipe\n        fields = 'title','description','preparation_time','preperation_time_unit', 'servings', 'servings_unit','category', 'slug','preparation_step', 'cover'\n        widgets = {\n            'cover': forms.FileInput(",
+        "detail": "authors.validators",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "core.asgi",
+        "description": "core.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True if os.environ.get('DEBUG') == '1' else False\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True if os.environ.get('DEBUG') == '1' else False\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DEBUG = True if os.environ.get('DEBUG') == '1' else False\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    # apps",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    # apps\n    \"recipes.apps.RecipesConfig\",\n    \"authors.apps.AuthorsConfig\",",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n]",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "ROOT_URLCONF = \"core.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "WSGI_APPLICATION = \"core.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nDEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG_TOOLBAR_CONFIG",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DEBUG_TOOLBAR_CONFIG = {\n    \"SHOW_TOOLBAR_CALLBACK\": lambda request: True,\n}\nINTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "INTERNAL_IPS = ['127.0.0.1',]\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10,\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "core.urls",
+        "description": "core.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include('recipes.urls')),\n    path(\"authors/\", include('authors.urls')),\n    path('__debug__/', include('debug_toolbar.urls')),\n]\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "detail": "core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "core.wsgi",
+        "description": "core.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "recipes.migrations.0001_initial",
+        "description": "recipes.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Category\",\n            fields=[\n                (",
+        "detail": "recipes.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "recipes.migrations.0002_alter_recipe_category_alter_recipe_cover_and_more",
+        "description": "recipes.migrations.0002_alter_recipe_category_alter_recipe_cover_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"recipes\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"recipe\",\n            name=\"category\",\n            field=models.ForeignKey(\n                blank=True,",
+        "detail": "recipes.migrations.0002_alter_recipe_category_alter_recipe_cover_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeTestBase",
+        "kind": 6,
+        "importPath": "recipes.tests.recipe_base_test",
+        "description": "recipes.tests.recipe_base_test",
+        "peekOfCode": "class RecipeTestBase(TestCase):\n    def setUp(self) -> None:\n        self.id_category = 1\n        self.category_url = reverse(\n            'recipes:category',\n            kwargs={'category_id': self.id_category}\n        )\n        self.recipe_id = 2\n        self.recipe_url = reverse('recipes:recipe',\n                                  kwargs={'recipe_id': self.recipe_id}",
+        "detail": "recipes.tests.recipe_base_test",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeModelTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipe_models",
+        "description": "recipes.tests.test_recipe_models",
+        "peekOfCode": "class RecipeModelTest(RecipeTestBase):\n    def setUp(self) -> None:\n        self.recipe = self.make_recipe()\n        return super().setUp()\n    def make_recipe_no_default(self):\n        recipe = Recipe(\n            category=self.make_recipe_category(name='Test new Category'),\n            author=self.make_recipe_author(username='newuser'),\n            title='some title',\n            description='some description',",
+        "detail": "recipes.tests.test_recipe_models",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesURLsTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipe_url",
+        "description": "recipes.tests.test_recipe_url",
+        "peekOfCode": "class RecipesURLsTest(TestCase):\n    def setUp(self):\n        self.id_category = 1\n        self.category_url = reverse(\n            'recipes:category',\n            kwargs={'category_id': self.id_category}\n        )\n        self.recipe_id = 2\n    def test_recipe_home_url_is_correct(self):\n        \"\"\"",
+        "detail": "recipes.tests.test_recipe_url",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeCategoryViewsTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipes_category_views",
+        "description": "recipes.tests.test_recipes_category_views",
+        "peekOfCode": "class RecipeCategoryViewsTest(RecipeTestBase):\n    # def test_recipe_category_view_function(self):\n    #     \"\"\"\n    #     Test must confirm if the correct view has been executed in category url\n    #     \"\"\"\n    #     view = resolve(self.category_url)\n    #     self.assertIs(view.func, views.category)\n    def test_recipe_category_template_loads_the_correct_recipe(self):\n        \"\"\"\n        Tests if the title is in html in the category url template",
+        "detail": "recipes.tests.test_recipes_category_views",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeDetailViewsTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipes_detail_view",
+        "description": "recipes.tests.test_recipes_detail_view",
+        "peekOfCode": "class RecipeDetailViewsTest(RecipeTestBase):\n    def test_recipe_view_function(self):\n        \"\"\"\n        Test must confirm if the correct view has been executed in recipe url\n        \"\"\"\n        view = resolve(self.recipe_url)\n        (view.func, site.recipe)\n    def test_recipe_view_return_404_if_not_recipes_found(self):\n        \"\"\"\n        Tests if recipe url returns a 'not found' status code when",
+        "detail": "recipes.tests.test_recipes_detail_view",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeHomeViewsTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipes_home_view",
+        "description": "recipes.tests.test_recipes_home_view",
+        "peekOfCode": "class RecipeHomeViewsTest(RecipeTestBase):\n    # def test_recipe_home_view_function(self):\n    #     \"\"\"\n    #     Test must confirm if the correct view has been executed in home url\n    #     \"\"\"\n    #     # alternativa não dinâmica: resolve('/')\n    #     view = resolve(self.home_url)\n    #     self.assertIs(view.func, views.home)\n    def test_home_view_render_correct_template(self):\n        \"\"\"",
+        "detail": "recipes.tests.test_recipes_home_view",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSeacrhViewsTest",
+        "kind": 6,
+        "importPath": "recipes.tests.test_recipes_search_view",
+        "description": "recipes.tests.test_recipes_search_view",
+        "peekOfCode": "class RecipeSeacrhViewsTest(RecipeTestBase):\n    # def test_recipe_search_view_function(self):\n    #     \"\"\"\n    #     Test must confirm if the correct view has been executed in search url\n    #     \"\"\"\n    #     # alternativa não dinâmica: resolve('/')\n    #     view = resolve(self.search_url)\n    #     self.assertIs(view.func, views.search)\n    def test_search_view_render_correct_template(self):\n        \"\"\"",
+        "detail": "recipes.tests.test_recipes_search_view",
+        "documentation": {}
+    },
+    {
+        "label": "add_attr",
+        "kind": 2,
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "peekOfCode": "def add_attr(field, attr_name, attr_new_value):\n    existing_attr = field.widget.attrs.get(attr_name, '')\n    field.widget.attrs[attr_name] = f'{existing_attr} {attr_new_value}'.strip()\ndef add_placeholder(field, placeholder_value):\n    field.widget.attrs['placeholder'] = placeholder_value\ndef strong_password(password):\n    regex = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')\n    if not regex.match(password):\n        raise ValidationError((\n            'Password must have at least one uppercase letter,'",
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "add_placeholder",
+        "kind": 2,
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "peekOfCode": "def add_placeholder(field, placeholder_value):\n    field.widget.attrs['placeholder'] = placeholder_value\ndef strong_password(password):\n    regex = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')\n    if not regex.match(password):\n        raise ValidationError((\n            'Password must have at least one uppercase letter,'\n            'one lowercase letter and one number. The length should be'\n            'at least 8 characters'\n        ),",
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "strong_password",
+        "kind": 2,
+        "importPath": "recipes.utils.django_forms",
+        "description": "recipes.utils.django_forms",
+        "peekOfCode": "def strong_password(password):\n    regex = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')\n    if not regex.match(password):\n        raise ValidationError((\n            'Password must have at least one uppercase letter,'\n            'one lowercase letter and one number. The length should be'\n            'at least 8 characters'\n        ),\n            code='invalid'\n        )",
+        "detail": "recipes.utils.django_forms",
+        "documentation": {}
+    },
+    {
+        "label": "rand_ratio",
+        "kind": 2,
+        "importPath": "recipes.utils.factory",
+        "description": "recipes.utils.factory",
+        "peekOfCode": "def rand_ratio():\n    return randint(840,900), randint(473,573)\nfake = Faker('pt-BR')\ndef make_recipe():\n    return {\n        'id':fake.unique.random_number(digits=3, fix_len=True),\n        'title': fake.sentence(nb_words=6),\n        'description': fake.sentence(nb_words=12),\n        'preparation_time': fake.random_number(digits=2, fix_len=True),\n        'preparation_time_unit': 'Minutos',",
+        "detail": "recipes.utils.factory",
+        "documentation": {}
+    },
+    {
+        "label": "make_recipe",
+        "kind": 2,
+        "importPath": "recipes.utils.factory",
+        "description": "recipes.utils.factory",
+        "peekOfCode": "def make_recipe():\n    return {\n        'id':fake.unique.random_number(digits=3, fix_len=True),\n        'title': fake.sentence(nb_words=6),\n        'description': fake.sentence(nb_words=12),\n        'preparation_time': fake.random_number(digits=2, fix_len=True),\n        'preparation_time_unit': 'Minutos',\n        'servings': fake.random_number(digits=2, fix_len=True),\n        'servings_unit': 'Porções',\n        'preparation_steps': fake.text(3000),",
+        "detail": "recipes.utils.factory",
+        "documentation": {}
+    },
+    {
+        "label": "fake",
+        "kind": 5,
+        "importPath": "recipes.utils.factory",
+        "description": "recipes.utils.factory",
+        "peekOfCode": "fake = Faker('pt-BR')\ndef make_recipe():\n    return {\n        'id':fake.unique.random_number(digits=3, fix_len=True),\n        'title': fake.sentence(nb_words=6),\n        'description': fake.sentence(nb_words=12),\n        'preparation_time': fake.random_number(digits=2, fix_len=True),\n        'preparation_time_unit': 'Minutos',\n        'servings': fake.random_number(digits=2, fix_len=True),\n        'servings_unit': 'Porções',",
+        "detail": "recipes.utils.factory",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination_range",
+        "kind": 2,
+        "importPath": "recipes.utils.pagination",
+        "description": "recipes.utils.pagination",
+        "peekOfCode": "def make_pagination_range(\n    page_range,\n    qt_pages,\n    current_page,\n):\n    middle_range = math.ceil(qt_pages/2)\n    start_range = current_page - middle_range\n    stop_range = current_page + middle_range\n    total_pages = len(page_range)\n    start_range_offset = abs(start_range) if start_range < 0 else 0",
+        "detail": "recipes.utils.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination",
+        "kind": 2,
+        "importPath": "recipes.utils.pagination",
+        "description": "recipes.utils.pagination",
+        "peekOfCode": "def make_pagination(request, queryset, per_page, qt_pages=4):\n    try:\n        current_page = int(request.GET.get('page', 1))\n    except ValueError:\n        current_page = 1\n    paginator = Paginator(queryset, per_page)\n    page_object = paginator.get_page(current_page)\n    pagination_range = make_pagination_range(\n        paginator.page_range,\n        qt_pages,",
+        "detail": "recipes.utils.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "is_positive_number",
+        "kind": 2,
+        "importPath": "recipes.utils.strings",
+        "description": "recipes.utils.strings",
+        "peekOfCode": "def is_positive_number(value):\n    try:\n        number_string = float(value)\n    except (ValueError, TypeError):\n        return False\n    return number_string > 0",
+        "detail": "recipes.utils.strings",
+        "documentation": {}
+    },
+    {
+        "label": "PaginationTest",
+        "kind": 6,
+        "importPath": "recipes.utils.test_pagination",
+        "description": "recipes.utils.test_pagination",
+        "peekOfCode": "class PaginationTest(TestCase):\n    def test_make_pagination_range_returns_a_pagination_range(self):\n        pagination = make_pagination_range(\n            page_range=list(range(1, 21)),\n            qt_pages=4,\n            current_page=2,\n        )['pagination']\n        self.assertEqual([1, 2, 3, 4], pagination)\n    def test_first_range_is_static_if_current_page_is_less_than_middle_page(self):  # noqa: E501\n        pagination = make_pagination_range(",
+        "detail": "recipes.utils.test_pagination",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeAPIv1Pagination",
+        "kind": 6,
+        "importPath": "recipes.views.api",
+        "description": "recipes.views.api",
+        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n# This code block was replaced by ViewSet for avoid duplication\n# class RecipesAPIv1List(ListCreateAPIView):\n#     \"\"\"\n#     View that contains the get and post methods and have the same url without a pk in it.",
+        "detail": "recipes.views.api",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeAPIv1ViewSet",
+        "kind": 6,
+        "importPath": "recipes.views.api",
+        "description": "recipes.views.api",
+        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n# This code block was replaced by ViewSet for avoid duplication\n# class RecipesAPIv1List(ListCreateAPIView):\n#     \"\"\"\n#     View that contains the get and post methods and have the same url without a pk in it.\n#     The 'get' method list recipes and the 'post' method create a new recipe.\n#     \"\"\"",
+        "detail": "recipes.views.api",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesListViewBase",
+        "kind": 6,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "class RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering =  ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set = query_set.filter(\n            is_published=True,",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesListViewHome",
+        "kind": 6,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "class RecipesListViewHome(RecipesListViewBase):\n    def get_context_data(self, *args, **kwargs):\n        context = super().get_context_data(*args, **kwargs)\n        title = 'Home | Recipes'\n        context.update(\n            {\n                'title': title\n            }\n        )\n        return context",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesListCategory",
+        "kind": 6,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "class RecipesListCategory(RecipesListViewBase):\n    template_name = 'recipes/pages/category.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set.filter(\n            category__id=self.kwargs.get('category_id')\n        )\n        return query_set\n    def get_context_data(self, *args, **kwargs):\n        context = super().get_context_data(*args, **kwargs)",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesListSearch",
+        "kind": 6,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "class RecipesListSearch(RecipesListViewBase):\n    template_name = 'recipes/pages/search_page.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        search_term = self.request.GET.get('q', '').strip()\n        if not search_term:\n            raise Http404()\n        query_set.filter(\n            Q(\n                Q(title__icontains=search_term) |",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "def home(request):\n    title = 'Home | Recipes'\n    recipes = Recipe.objects.filter(is_published=True).order_by('-id')\n    page_object, pagination_range = make_pagination(\n        request, recipes, PER_PAGES)\n    return render(\n        request,\n        'recipes/pages/home.html',\n        context={'title': title, 'recipes': page_object,\n                 'pagination_range': pagination_range}",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "recipe",
+        "kind": 2,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "def recipe(request, recipe_id):\n    recipe = get_object_or_404(Recipe, pk=recipe_id, is_published=True)\n    title = f\"{recipe.title} | Recipes'\"\n    return render(\n        request,\n        'recipes/pages/recipe_detail.html',\n        context={'title': title, 'recipe': recipe, 'is_detail_page': True}\n    )\ndef category(request, category_id):\n    recipes = get_list_or_404(Recipe.objects.filter(",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "category",
+        "kind": 2,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "def category(request, category_id):\n    recipes = get_list_or_404(Recipe.objects.filter(\n        category__id=category_id).order_by('-id'))\n    title = f\"{recipes[0].category.name} - Category | Recipes\"\n    page_object, pagination_range = make_pagination(\n        request, recipes, PER_PAGES)\n    return render(\n        request,\n        'recipes/pages/category.html',\n        context={'title': title, 'recipes': page_object,",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "def search(request):\n    # strip tira espaços da string\n    search_term = request.GET.get('q', '').strip()\n    title = f'Search for \"{search_term}\" | Recipes'\n    if not search_term:\n        raise Http404()\n    recipes = Recipe.objects.filter(\n        Q(Q(title__icontains=search_term) | Q(\n            description__icontains=search_term)), is_published=True,\n    ).order_by('-id')",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "PER_PAGES",
+        "kind": 5,
+        "importPath": "recipes.views.site",
+        "description": "recipes.views.site",
+        "peekOfCode": "PER_PAGES = int(os.environ.get('PER_PAGE', 6))\nclass RecipesListViewBase(ListView):\n    model = Recipe\n    context_object_name = 'recipes'\n    paginate_by = None\n    ordering =  ['-id']\n    template_name = 'recipes/pages/home.html'\n    def get_queryset(self, *args,**kwargs):\n        query_set = super().get_queryset(*args,**kwargs)\n        query_set = query_set.filter(",
+        "detail": "recipes.views.site",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryAdmin",
+        "kind": 6,
+        "importPath": "recipes.admin",
+        "description": "recipes.admin",
+        "peekOfCode": "class CategoryAdmin(admin.ModelAdmin):\n    ...\nclass RecipeAdmin(admin.ModelAdmin):\n    list_display = ['id', 'title', 'is_published', 'created_at']\n    list_display_links = ['title']\n    search_fields = ['id', 'title', 'description', 'slug']\n    list_filter = ['category', 'author', 'is_published', 'preparation_step_is_html']\n    list_per_page = 10\n    list_editable = ['is_published']\n    ordering = '-id',",
+        "detail": "recipes.admin",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeAdmin",
+        "kind": 6,
+        "importPath": "recipes.admin",
+        "description": "recipes.admin",
+        "peekOfCode": "class RecipeAdmin(admin.ModelAdmin):\n    list_display = ['id', 'title', 'is_published', 'created_at']\n    list_display_links = ['title']\n    search_fields = ['id', 'title', 'description', 'slug']\n    list_filter = ['category', 'author', 'is_published', 'preparation_step_is_html']\n    list_per_page = 10\n    list_editable = ['is_published']\n    ordering = '-id',\n    prepopulated_fields = {\n        'slug': ('title',)",
+        "detail": "recipes.admin",
+        "documentation": {}
+    },
+    {
+        "label": "RecipesConfig",
+        "kind": 6,
+        "importPath": "recipes.apps",
+        "description": "recipes.apps",
+        "peekOfCode": "class RecipesConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"recipes\"",
+        "detail": "recipes.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=65)\n    def __str__(self):\n        return self.name\nclass RecipeManager(models.Manager):\n    def get_published(self):\n        return self.filter(\n            is_published=True\n        ).annotate(\n            author_full_name=Concat(",
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeManager",
+        "kind": 6,
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "peekOfCode": "class RecipeManager(models.Manager):\n    def get_published(self):\n        return self.filter(\n            is_published=True\n        ).annotate(\n            author_full_name=Concat(\n                F('author__first_name'), Value(' '),\n                F('author__last_name'), Value(' ('),\n                F('author__username'), Value(')',)\n            )",
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "Recipe",
+        "kind": 6,
+        "importPath": "recipes.models",
+        "description": "recipes.models",
+        "peekOfCode": "class Recipe(models.Model):\n    objects = RecipeManager()\n    title = models.CharField(max_length=65)\n    description = models.CharField(max_length=165)\n    slug = models.SlugField(unique=True)\n    preparation_time = models.IntegerField()\n    # TODO arrumar o nome do field abaixo: prepAration\n    preperation_time_unit = models.CharField(max_length=10)\n    servings = models.IntegerField()\n    servings_unit = models.CharField(max_length=10)",
+        "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSerializer",
+        "kind": 6,
+        "importPath": "recipes.serializers",
+        "description": "recipes.serializers",
+        "peekOfCode": "class RecipeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model =Recipe\n        fields = [\n            'id','title','description','category_name','author', 'public', 'preparation_time','preperation_time_unit', 'servings', 'servings_unit', 'preparation_step', 'cover'\n        ]\n    category_name = serializers.StringRelatedField(source='category')\n    public = serializers.BooleanField(\n        source='is_published',\n        read_only=True,",
+        "detail": "recipes.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "recipes.urls",
+        "description": "recipes.urls",
+        "peekOfCode": "app_name = 'recipes'\nurlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    path(\"recipes/api/v1/\", views.RecipeAPIv1ViewSet.as_view(",
+        "detail": "recipes.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "recipes.urls",
+        "description": "recipes.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.RecipesListViewHome.as_view(), name=\"home\"),\n    path(\"recipes/search/\", views.RecipesListSearch.as_view(), name=\"search\"),\n    path(\n        \"recipes/category/<int:category_id>/\",\n        views.RecipesListCategory.as_view(), name=\"category\"\n    ),\n    path(\"recipes/<int:recipe_id>/\", views.recipe, name=\"recipe\"),\n    path(\"recipes/api/v1/\", views.RecipeAPIv1ViewSet.as_view(\n        {'get': 'list',",
+        "detail": "recipes.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include_setuptools",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def include_setuptools(args):\n    \"\"\"\n    Install setuptools only if absent and not excluded.\n    \"\"\"\n    cli = not args.no_setuptools\n    env = not os.environ.get(\"PIP_NO_SETUPTOOLS\")\n    absent = not importlib.util.find_spec(\"setuptools\")\n    return cli and env and absent\ndef include_wheel(args):\n    \"\"\"",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "include_wheel",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def include_wheel(args):\n    \"\"\"\n    Install wheel only if absent and not excluded.\n    \"\"\"\n    cli = not args.no_wheel\n    env = not os.environ.get(\"PIP_NO_WHEEL\")\n    absent = not importlib.util.find_spec(\"wheel\")\n    return cli and env and absent\ndef determine_pip_install_arguments():\n    pre_parser = argparse.ArgumentParser()",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "determine_pip_install_arguments",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def determine_pip_install_arguments():\n    pre_parser = argparse.ArgumentParser()\n    pre_parser.add_argument(\"--no-setuptools\", action=\"store_true\")\n    pre_parser.add_argument(\"--no-wheel\", action=\"store_true\")\n    pre, args = pre_parser.parse_known_args()\n    args.append(\"pip\")\n    if include_setuptools(pre):\n        args.append(\"setuptools\")\n    if include_wheel(pre):\n        args.append(\"wheel\")",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "monkeypatch_for_cert",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def monkeypatch_for_cert(tmpdir):\n    \"\"\"Patches `pip install` to provide default certificate with the lowest priority.\n    This ensures that the bundled certificates are used unless the user specifies a\n    custom cert via any of pip's option passing mechanisms (config, env-var, CLI).\n    A monkeypatch is the easiest way to achieve this, without messing too much with\n    the rest of pip's internals.\n    \"\"\"\n    from pip._internal.commands.install import InstallCommand\n    # We want to be using the internal certificates.\n    cert_path = os.path.join(tmpdir, \"cacert.pem\")",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "bootstrap",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def bootstrap(tmpdir):\n    monkeypatch_for_cert(tmpdir)\n    # Execute the included pip and use it to install the latest pip and\n    # setuptools from PyPI\n    from pip._internal.cli.main import main as pip_entry_point\n    args = determine_pip_install_arguments()\n    sys.exit(pip_entry_point(args))\ndef main():\n    tmpdir = None\n    try:",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def main():\n    tmpdir = None\n    try:\n        # Create a temporary working directory\n        tmpdir = tempfile.mkdtemp()\n        # Unpack the zipfile into the temporary directory\n        pip_zip = os.path.join(tmpdir, \"pip.zip\")\n        with open(pip_zip, \"wb\") as fp:\n            fp.write(b85decode(DATA.replace(b\"\\n\", b\"\")))\n        # Add the zipfile to sys.path so that we can import it",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "this_python",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "this_python = sys.version_info[:2]\nmin_version = (3, 7)\nif this_python < min_version:\n    message_parts = [\n        \"This script does not work on Python {}.{}\".format(*this_python),\n        \"The minimum supported Python version is {}.{}.\".format(*min_version),\n        \"Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.\".format(*this_python),\n    ]\n    print(\"ERROR: \" + \" \".join(message_parts))\n    sys.exit(1)",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "min_version",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "min_version = (3, 7)\nif this_python < min_version:\n    message_parts = [\n        \"This script does not work on Python {}.{}\".format(*this_python),\n        \"The minimum supported Python version is {}.{}.\".format(*min_version),\n        \"Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.\".format(*this_python),\n    ]\n    print(\"ERROR: \" + \" \".join(message_parts))\n    sys.exit(1)\nimport os.path",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "DATA",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "DATA = b\"\"\"\nP)h>@6aWAK2mngCK33$8H+}X1003hF000jF003}la4%n9X>MtBUtcb8c|B0UO2j}6z0X&KUUXrd5f#*\nef)_y$_26w;%50mqfp%s{QkVX{vt7C&5b}6=dAye62s$SU9nhE}D}0jZ7QT~G41O@Cs{W8AFI5FEP~6\n?y+rk*rU<;$CaP7I1^1|Pp&Ud1`-)Ht$47h=tSD>J!fm}sV{PrY}+lLd3oUh>R=L2FGW*E^2g*Gxwf^\ne82QMwX{#{hK<5(fmSnUab%i{N{v`lg}tduUKS4YCD6gkCjC>0C$JPX}Aa(WN<gmo*)UOepU0;rYp~&\nX(DpBFPL}t?ulkS<+%qo>R=ItXWk@_9-EstuX4u;Q}tnY|KAUO9KQH0000807|(&RwEnZzik2l0Imc8\n01p5F0B~t=FJE76VQFq(UoLQYT~onsoG=i*^A#g<SawB74(*{)w^F5Ea_J$eltWV?7ly@Ju#s(+Y`?y\n54D2T1gzYzP-n^O7{a{@n>k~cy`Say>QqE{|@JVt*Pu$xR(`G};)Krbmu>r!mBM?+;$5pWIOpUWWg_f\nz&&Iba>oe^#uAua|L+MIMlgJUlQ!IC;zUDN1=XXU-{AygY0^gxyEd!+VMwOk!@Bx3%@ATvIwuFI*@$S\n2}_Yo{E6Q_BX=Cwt_Yl&9ewT5IUGk9=Pj!f%PbYWscvNAhK9n!}Rfz@eJzY`c9(2;Yh-20LW;Te0P_p",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"core.settings\")\n    load_dotenv()\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
