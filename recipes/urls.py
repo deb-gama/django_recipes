@@ -24,7 +24,8 @@ urlpatterns = [
          name='token_obtain_pair'),
     path('recipes/api/token/refresh/',
          TokenRefreshView.as_view(), name='token_refresh'),
-
+    path('recipes/api/token/verify/',
+         TokenVerifyView.as_view(), name='token_verify'),
     # This code block was replaced by simpleRouter definitions that create the detail and list urls
     # automactilly
     # path("recipes/api/v1/", views.RecipeAPIv1ViewSet.as_view(
@@ -35,7 +36,7 @@ urlpatterns = [
     # path("recipes/api/v1/<int:pk>", views.RecipeAPIv1ViewSet.as_view(
     #     {
     #         'get': 'retrieve',
-    #         'patch': 'partial_update',
+    #         'patch': '',
     #         'delete': 'destroy',
     #     }
     # ), name="recipe_api_v1_detail"),

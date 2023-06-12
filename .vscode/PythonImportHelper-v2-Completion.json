@@ -680,6 +680,14 @@
         "documentation": {}
     },
     {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "get_list_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -996,6 +1004,14 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticatedOrReadOnly",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -1017,6 +1033,14 @@
         "description": "rest_framework.viewsets",
         "isExtraImport": true,
         "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwner",
+        "importPath": "recipes.permissions",
+        "description": "recipes.permissions",
+        "isExtraImport": true,
+        "detail": "recipes.permissions",
         "documentation": {}
     },
     {
@@ -1082,6 +1106,14 @@
         "description": "django.db.models.functions",
         "isExtraImport": true,
         "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -1811,7 +1843,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():",
+        "peekOfCode": "class RecipeAPIv1Pagination(PageNumberPagination):\n    page_size = 3\nclass RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')",
         "detail": "recipes.views.api",
         "documentation": {}
     },
@@ -1820,7 +1852,7 @@
         "kind": 6,
         "importPath": "recipes.views.api",
         "description": "recipes.views.api",
-        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():\n            queryset = queryset.filter(category_id=category_id)\n        return queryset",
+        "peekOfCode": "class RecipeAPIv1ViewSet(ModelViewSet):\n    queryset = Recipe.objects.get_published()\n    serializer_class = RecipeSerializer\n    pagination_class = RecipeAPIv1Pagination\n    permission_classes = [IsAuthenticatedOrReadOnly,]\n    def get_queryset(self):\n        queryset = super().get_queryset()\n        category_id = self.request.query_params.get('category_id', '')\n        if category_id != '' and category_id.isnumeric():\n            queryset = queryset.filter(category_id=category_id)",
         "detail": "recipes.views.api",
         "documentation": {}
     },
@@ -1930,6 +1962,15 @@
         "description": "recipes.models",
         "peekOfCode": "class Recipe(models.Model):\n    objects = RecipeManager()\n    title = models.CharField(max_length=65)\n    description = models.CharField(max_length=165)\n    slug = models.SlugField(unique=True)\n    preparation_time = models.IntegerField()\n    # TODO arrumar o nome do field abaixo: prepAration\n    preperation_time_unit = models.CharField(max_length=10)\n    servings = models.IntegerField()\n    servings_unit = models.CharField(max_length=10)",
         "detail": "recipes.models",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwner",
+        "kind": 6,
+        "importPath": "recipes.permissions",
+        "description": "recipes.permissions",
+        "peekOfCode": "class IsOwner(permissions.BasePermission):\n    \"\"\"\n    This class verifies if the user is owner of the account to have\n    acess to specific actions like create, update or delete a recipe.\n    \"\"\"\n    def has_object_permission(self, request, view, obj):\n        return obj.author == request.user",
+        "detail": "recipes.permissions",
         "documentation": {}
     },
     {
