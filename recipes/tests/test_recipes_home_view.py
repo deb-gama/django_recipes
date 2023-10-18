@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 from django.urls import resolve, reverse
 
-from recipes import views
+from recipes.views import site
 
 from .recipe_base_test import RecipeTestBase
 
@@ -70,7 +70,7 @@ class RecipeHomeViewsTest(RecipeTestBase):
 
     # TODO criar teste para receita não publicada nas views recipe e category
 
-    @patch('recipes.views.PER_PAGES', new='3')
+    @patch('recipes.views.site.PER_PAGES', new='3')
     def test_recipe_home_is_paginated(self):
 
         for i in range(8):

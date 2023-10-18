@@ -1,6 +1,6 @@
 from django.urls import resolve, reverse
 
-from recipes import views
+from recipes.views import site
 
 from .recipe_base_test import RecipeTestBase
 
@@ -12,7 +12,7 @@ class RecipeDetailViewsTest(RecipeTestBase):
         Test must confirm if the correct view has been executed in recipe url
         """
         view = resolve(self.recipe_url)
-        (view.func, views.recipe)
+        (view.func, site.recipe)
 
     def test_recipe_view_return_404_if_not_recipes_found(self):
         """

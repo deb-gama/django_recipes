@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.views import View
 
-from authors.forms import AuthorRecipeForm
+from authors.forms import AuthorRecipeForm, AuthorCreateRecipeForm
 from recipes.models import Recipe
 
 
@@ -53,7 +53,7 @@ class DashboardRecipe(View):
     def post(self, request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
         title = 'Authors | Dashboard Edit Recipe'
-        form = AuthorRecipeForm(data=request.POST or None,files=request.FILES or None, instance=recipe)
+        form = AuthorCreateRecipeForm(data=request.POST or None,files=request.FILES or None, instance=recipe)
 
         if form.is_valid():
             # salvando os dados na variável antes de salvar na base de dados
