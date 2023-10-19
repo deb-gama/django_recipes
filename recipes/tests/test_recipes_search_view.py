@@ -6,7 +6,6 @@ from .recipe_base_test import RecipeTestBase
 
 
 class RecipeSeacrhViewsTest(RecipeTestBase):
-
     # def test_recipe_search_view_function(self):
     #     """
     #     Test must confirm if the correct view has been executed in search url
@@ -19,8 +18,8 @@ class RecipeSeacrhViewsTest(RecipeTestBase):
         """
         Tests if search url render the correct template
         """
-        response = self.client.get(reverse('recipes:search') + '?q=teste')
-        self.assertTemplateUsed(response, 'recipes/pages/search_page.html')
+        response = self.client.get(reverse("recipes:search") + "?q=teste")
+        self.assertTemplateUsed(response, "recipes/pages/search_page.html")
 
     def test_recipe_search_view_return_404_if_query_dont_exists(self):
         """
@@ -33,11 +32,10 @@ class RecipeSeacrhViewsTest(RecipeTestBase):
         self.assertEqual(response.status_code, 404)
 
     def test_recipe_search_term_is_on_page_title_and_escaped(self):
-        url = self.search_url + '?q=Test'
+        url = self.search_url + "?q=Test"
         response = self.client.get(url)
 
-        self.assertIn('Search for &quot;Test&quot;',
-                      response.content.decode('utf-8'))
+        self.assertIn("Search for &quot;Test&quot;", response.content.decode("utf-8"))
 
     # def test_recipe_search_can_find_recipe_by_title(self):
     #     title_1 = 'This is recipe one'

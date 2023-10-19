@@ -8,22 +8,21 @@ class RecipeTestBase(TestCase):
     def setUp(self) -> None:
         self.id_category = 1
         self.category_url = reverse(
-            'recipes:category',
-            kwargs={'category_id': self.id_category}
+            "recipes:category", kwargs={"category_id": self.id_category}
         )
         self.recipe_id = 2
-        self.recipe_url = reverse('recipes:recipe',
-                                  kwargs={'recipe_id': self.recipe_id}
-                                  )
-        self.home_url = reverse('recipes:home')
+        self.recipe_url = reverse(
+            "recipes:recipe", kwargs={"recipe_id": self.recipe_id}
+        )
+        self.home_url = reverse("recipes:home")
         self.response_home = self.client.get(self.home_url)
         self.response_category = self.client.get(self.category_url)
         self.response_recipe = self.client.get(self.recipe_url)
-        self.search_url = reverse('recipes:search')
+        self.search_url = reverse("recipes:search")
 
         return super().setUp()
 
-    def make_recipe_category(self, name='category_test'):
+    def make_recipe_category(self, name="category_test"):
         """
         Create a recipe category with name set by default value if the method
         dont get an argument.
@@ -32,11 +31,11 @@ class RecipeTestBase(TestCase):
 
     def make_recipe_author(
         self,
-        first_name='John',
-        last_name='Doe',
-        username='john_doe',
-        password='1234',
-        email='john_doe@email.com'
+        first_name="John",
+        last_name="Doe",
+        username="john_doe",
+        password="1234",
+        email="john_doe@email.com",
     ):
         """
         Create a django user author with data set by default values if the
@@ -54,15 +53,15 @@ class RecipeTestBase(TestCase):
         self,
         category_data=None,
         author_data=None,
-        title='some title',
-        description='some description',
-        slug='some-slug',
+        title="some title",
+        description="some description",
+        slug="some-slug",
         preparation_time=10,
-        preperation_time_unit='Minutos',
+        preperation_time_unit="Minutos",
         servings=1,
-        cover='https://some-image.com',
-        servings_unit='Porções',
-        preparation_step='some preparation step',
+        cover="https://some-image.com",
+        servings_unit="Porções",
+        preparation_step="some preparation step",
         preparation_step_is_html=False,
         is_published=True,
     ):

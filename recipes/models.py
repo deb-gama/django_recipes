@@ -13,17 +13,26 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class RecipeManager(models.Manager):
     def get_published(self):
-        return self.filter(
-            is_published=True
-        ).annotate(
-            author_full_name=Concat(
-                F('author__first_name'), Value(' '),
-                F('author__last_name'), Value(' ('),
-                F('author__username'), Value(')',)
+        return (
+            self.filter(is_published=True)
+            .annotate(
+                author_full_name=Concat(
+                    F("author__first_name"),
+                    Value(" "),
+                    F("author__last_name"),
+                    Value(" ("),
+                    F("author__username"),
+                    Value(
+                        ")",
+                    ),
+                )
             )
-        ).order_by('-id').select_related('category', 'author')
+            .order_by("-id")
+            .select_related("category", "author")
+        )
 
 
 class Recipe(models.Model):
@@ -41,32 +50,20 @@ class Recipe(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
-    cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/', blank=True)
+    cover = models.ImageField(upload_to="recipes/covers/%Y/%m/%d/", blank=True)
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL,
-        null=True, blank=True,
-        default=None
+        Category, on_delete=models.SET_NULL, null=True, blank=True, default=None
     )
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-
 
     def __str__(self):
         return self.title
 
-
     def save(self, *args, **kwargs):
         if not self.slug:
-            rand_letters = ''.join(
-                SystemRandom().choices(
-                    string.ascii_letters + string.digits
-                )
+            rand_letters = "".join(
+                SystemRandom().choices(string.ascii_letters + string.digits)
             )
-            self.slug = slugify(f'{self.title}-{rand_letters}')
+            self.slug = slugify(f"{self.title}-{rand_letters}")
 
         return super().save(*args, **kwargs)
-
-
-
-
-
-

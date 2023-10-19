@@ -8,8 +8,10 @@ from ..serializers import AuthorSerializer
 
 class AuthorViewSet(ReadOnlyModelViewSet):
     serializer_class = AuthorSerializer
-    permission_classes = [IsAuthenticated,]
-    http_method_names = ['get']
+    permission_classes = [
+        IsAuthenticated,
+    ]
+    http_method_names = ["get"]
 
     def get_queryset(self):
         user = get_user_model()

@@ -13,38 +13,41 @@ class AuthorCreateRecipeForm(forms.ModelForm):
 
         self._recipe_create_errors = defaultdict(list)
 
-        add_attr(self.fields.get('preparation_step'), 'class', 'span-2')
-        add_attr(self.fields.get('cover'), 'class', 'span-2')
+        add_attr(self.fields.get("preparation_step"), "class", "span-2")
+        add_attr(self.fields.get("cover"), "class", "span-2")
 
     class Meta:
         model = Recipe
-        fields = 'title','description','preparation_time','preperation_time_unit', 'servings', 'servings_unit','category', 'slug','preparation_step', 'cover'
+        fields = (
+            "title",
+            "description",
+            "preparation_time",
+            "preperation_time_unit",
+            "servings",
+            "servings_unit",
+            "category",
+            "slug",
+            "preparation_step",
+            "cover",
+        )
         widgets = {
-            'cover': forms.FileInput(
-                attrs = {
-                    'class': 'span-2'
-                }
-            ),
-            'servings_unit': forms.Select(
-                choices = (
-                    ('Porções', 'Porções'),
-                    ('Pedaços', 'Pedaços'),
-                    ('Fatias', 'Fatias'),
+            "cover": forms.FileInput(attrs={"class": "span-2"}),
+            "servings_unit": forms.Select(
+                choices=(
+                    ("Porções", "Porções"),
+                    ("Pedaços", "Pedaços"),
+                    ("Fatias", "Fatias"),
                 )
             ),
-            'preperation_time_unit': forms.Select(
-                choices = (
-                    ('Minutos', 'Minutos'),
-                    ('Horas', 'Horas'),
+            "preperation_time_unit": forms.Select(
+                choices=(
+                    ("Minutos", "Minutos"),
+                    ("Horas", "Horas"),
                 )
             ),
         }
 
     def clean(self, *args, **kwargs):
         super_clean = super().clean(*args, **kwargs)
-        AuthorCreateRecipeValidator(self.cleaned_data,error_class=ValidationError)
+        AuthorCreateRecipeValidator(self.cleaned_data, error_class=ValidationError)
         return super_clean
-
-
-
-

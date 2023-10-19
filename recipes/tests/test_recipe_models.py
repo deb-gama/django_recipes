@@ -11,17 +11,17 @@ class RecipeModelTest(RecipeTestBase):
 
     def make_recipe_no_default(self):
         recipe = Recipe(
-            category=self.make_recipe_category(name='Test new Category'),
-            author=self.make_recipe_author(username='newuser'),
-            title='some title',
-            description='some description',
-            slug='some-slug-1',
+            category=self.make_recipe_category(name="Test new Category"),
+            author=self.make_recipe_author(username="newuser"),
+            title="some title",
+            description="some description",
+            slug="some-slug-1",
             preparation_time=10,
-            preperation_time_unit='Minutos',
+            preperation_time_unit="Minutos",
             servings=1,
-            cover='https://some-image.com',
-            servings_unit='Porções',
-            preparation_step='some preparation step',
+            cover="https://some-image.com",
+            servings_unit="Porções",
+            preparation_step="some preparation step",
         )
         recipe.full_clean()
         recipe.save()
@@ -47,20 +47,22 @@ class RecipeModelTest(RecipeTestBase):
     #     self.recipe.full_clean()
     #     self.fail()
 
-        # with self.assertRaises(ValidationError):
+    # with self.assertRaises(ValidationError):
 
-    @parameterized.expand([
-        ('title', 65),
-        ('description', 165),
-        ('preperation_time_unit', 10),
-        ('servings_unit', 10),
-    ])
+    @parameterized.expand(
+        [
+            ("title", 65),
+            ("description", 165),
+            ("preperation_time_unit", 10),
+            ("servings_unit", 10),
+        ]
+    )
     def test_recipe_fields_max_length(self, field, max_length):
         """
         Testing max_length fields
         """
         # set object, campo que quer setar, valor
-        setattr(self.recipe, field, 'A' * (max_length + 1))
+        setattr(self.recipe, field, "A" * (max_length + 1))
         with self.assertRaises(ValidationError):
             self.recipe.full_clean()
 
@@ -70,8 +72,10 @@ class RecipeModelTest(RecipeTestBase):
         """
         recipe = self.make_recipe_no_default()
 
-        self.assertFalse(recipe.preparation_step_is_html,
-                         msg='Recipe preparation_steps_is_html is not False')
+        self.assertFalse(
+            recipe.preparation_step_is_html,
+            msg="Recipe preparation_steps_is_html is not False",
+        )
 
     def test_recipe_is_published_false_by_default(self):
         """
@@ -79,20 +83,20 @@ class RecipeModelTest(RecipeTestBase):
         """
         recipe = self.make_recipe_no_default()
 
-        self.assertFalse(recipe.is_published,
-                         msg='Recipe is_published is not False')
+        self.assertFalse(recipe.is_published, msg="Recipe is_published is not False")
 
     def test_recipe_string_representation(self):
         """
         Testing __str__ method of recipe model.
         """
-        self.recipe.title = 'Testing Representation String'
+        self.recipe.title = "Testing Representation String"
         self.recipe.full_clean()
         self.recipe.save()
 
         self.assertEqual(
-            str(self.recipe), 'Testing Representation String',
-            msg='Recipe string representation must be recipe title'
+            str(self.recipe),
+            "Testing Representation String",
+            msg="Recipe string representation must be recipe title",
         )
 
     def test_recipe__category_string_representation_is_name_field(self):
@@ -100,9 +104,11 @@ class RecipeModelTest(RecipeTestBase):
         Testing __str__ method of category model.
         """
         category = self.make_recipe_category(
-            name='Testing Representation String Category')
+            name="Testing Representation String Category"
+        )
 
         self.assertEqual(
-            str(category), 'Testing Representation String Category',
-            msg='Category string representation must be category name.'
+            str(category),
+            "Testing Representation String Category",
+            msg="Category string representation must be category name.",
         )

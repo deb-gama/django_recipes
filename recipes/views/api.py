@@ -1,4 +1,3 @@
-
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
@@ -25,20 +24,22 @@ class RecipeAPIv1ViewSet(ModelViewSet):
     queryset = Recipe.objects.get_published()
     serializer_class = RecipeSerializer
     pagination_class = RecipeAPIv1Pagination
-    permission_classes = [IsAuthenticatedOrReadOnly,]
-    http_method_names = ['get', 'options', 'head', 'patch', 'post', 'delete']
+    permission_classes = [
+        IsAuthenticatedOrReadOnly,
+    ]
+    http_method_names = ["get", "options", "head", "patch", "post", "delete"]
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        category_id = self.request.query_params.get('category_id', '')
+        category_id = self.request.query_params.get("category_id", "")
 
-        if category_id != '' and category_id.isnumeric():
+        if category_id != "" and category_id.isnumeric():
             queryset = queryset.filter(category_id=category_id)
 
         return queryset
 
     def get_object(self):
-        pk = self.kwargs.get('pk', '')
+        pk = self.kwargs.get("pk", "")
         obj = get_object_or_404(self.get_queryset(), pk=pk)
 
         self.check_object_permissions(self.request, obj)
@@ -46,8 +47,10 @@ class RecipeAPIv1ViewSet(ModelViewSet):
         return obj
 
     def get_permissions(self):
-        if self.request.method in ['PATCH', 'DELETE']:
-            return [IsOwner(),]
+        if self.request.method in ["PATCH", "DELETE"]:
+            return [
+                IsOwner(),
+            ]
 
         return super().get_permissions()
 
@@ -58,9 +61,7 @@ class RecipeAPIv1ViewSet(ModelViewSet):
         headers = self.get_success_headers(serializer.data)
 
         return Response(
-            serializer.data,
-            status=status.HTTP_201_CREATED,
-            headers=headers
+            serializer.data, status=status.HTTP_201_CREATED, headers=headers
         )
 
 

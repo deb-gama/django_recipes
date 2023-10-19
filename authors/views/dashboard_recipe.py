@@ -10,21 +10,20 @@ from authors.forms import AuthorRecipeForm, AuthorCreateRecipeForm
 from recipes.models import Recipe
 
 
-#decorating dispatch method of generic View
+# decorating dispatch method of generic View
 @method_decorator(
-    login_required(login_url='authors:login', redirect_field_name=next),
-    name='dispatch'
- )
+    login_required(login_url="authors:login", redirect_field_name=next), name="dispatch"
+)
 class DashboardRecipe(View):
-    def render_recipe(self,form,title,recipe):
+    def render_recipe(self, form, title, recipe):
         return render(
             self.request,
-            'authors/pages/dashboard_recipe.html',
-            context= {
-                'title': title,
-                'recipe': recipe,
-                'form': form,
-            }
+            "authors/pages/dashboard_recipe.html",
+            context={
+                "title": title,
+                "recipe": recipe,
+                "form": form,
+            },
         )
 
     def get_recipe(self, recipe_id=None):
@@ -33,8 +32,8 @@ class DashboardRecipe(View):
         if recipe_id is not None:
             recipe = Recipe.objects.filter(
                 is_published=False,
-                author = self.request.user,
-                pk = recipe_id,
+                author=self.request.user,
+                pk=recipe_id,
             ).first()
 
             if not recipe:
@@ -42,18 +41,19 @@ class DashboardRecipe(View):
 
         return recipe
 
-    def get(self,request, recipe_id=None):
+    def get(self, request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
-        title = 'Authors | Dashboard Edit Recipe'
+        title = "Authors | Dashboard Edit Recipe"
         form = AuthorRecipeForm(instance=recipe)
 
-        return self.render_recipe( form, title, recipe)
-
+        return self.render_recipe(form, title, recipe)
 
     def post(self, request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
-        title = 'Authors | Dashboard Edit Recipe'
-        form = AuthorCreateRecipeForm(data=request.POST or None,files=request.FILES or None, instance=recipe)
+        title = "Authors | Dashboard Edit Recipe"
+        form = AuthorCreateRecipeForm(
+            data=request.POST or None, files=request.FILES or None, instance=recipe
+        )
 
         if form.is_valid():
             # salvando os dados na variável antes de salvar na base de dados
@@ -65,19 +65,19 @@ class DashboardRecipe(View):
 
             # salvando na base de dados após verifcações feitas acima
             recipe.save()
-            messages.success(request, 'Your recipe was saved!')
-            return redirect(reverse('authors:dashboard_recipe_edit', args=(recipe.id,)))
+            messages.success(request, "Your recipe was saved!")
+            return redirect(reverse("authors:dashboard_recipe_edit", args=(recipe.id,)))
 
         return self.render_recipe(form, title, recipe)
 
+
 @method_decorator(
-    login_required(login_url='authors:login', redirect_field_name=next),
-    name='dispatch'
+    login_required(login_url="authors:login", redirect_field_name=next), name="dispatch"
 )
 class DashboardRecipeDelete(DashboardRecipe):
     def post(self, *args, **kwargs):
-        recipe = self.get_recipe(self.request.POST.get('id'))
+        recipe = self.get_recipe(self.request.POST.get("id"))
         recipe.delete()
 
-        messages.success(self.request, 'Deleted successfully')
-        return redirect('authors:dashboard')
+        messages.success(self.request, "Deleted successfully")
+        return redirect("authors:dashboard")

@@ -6,7 +6,6 @@ from .recipe_base_test import RecipeTestBase
 
 
 class RecipeDetailViewsTest(RecipeTestBase):
-
     def test_recipe_view_function(self):
         """
         Test must confirm if the correct view has been executed in recipe url
@@ -19,9 +18,6 @@ class RecipeDetailViewsTest(RecipeTestBase):
         Tests if recipe url returns a 'not found' status code when
         the recipe_id doesnt exists
         """
-        recipe_url = reverse(
-            'recipes:recipe',
-            kwargs={'recipe_id': 10000000000}
-        )
+        recipe_url = reverse("recipes:recipe", kwargs={"recipe_id": 10000000000})
         response = self.client.get(recipe_url)
         self.assertEqual(response.status_code, 404)
