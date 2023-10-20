@@ -60,10 +60,9 @@ class Recipe(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            rand_letters = "".join(
-                SystemRandom().choices(string.ascii_letters + string.digits)
-            )
-            self.slug = slugify(f"{self.title}-{rand_letters}")
+        rand_letters = "".join(
+            SystemRandom().choices(string.ascii_letters + string.digits)
+        )
+        self.slug = slugify(f"{self.title}-{rand_letters}")
 
         return super().save(*args, **kwargs)
