@@ -56,6 +56,7 @@ class DashboardRecipe(View):
         form = AuthorCreateRecipeForm(
             data=request.POST or None, files=request.FILES or None, instance=recipe
         )
+        is_dashboard = True
 
         if form.is_valid():
             # salvando os dados na variável antes de salvar na base de dados
@@ -70,7 +71,7 @@ class DashboardRecipe(View):
             messages.success(request, "Your recipe was saved!")
             return redirect(reverse("authors:dashboard_recipe_edit", args=(recipe.id,)))
 
-        return self.render_recipe(form, title, recipe,is_dashboard)
+        return self.render_recipe(form, title, recipe, is_dashboard)
 
 
 @method_decorator(
