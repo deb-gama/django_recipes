@@ -8,14 +8,6 @@ from .recipe_base_test import RecipeTestBase
 
 
 class RecipeHomeViewsTest(RecipeTestBase):
-    # def test_recipe_home_view_function(self):
-    #     """
-    #     Test must confirm if the correct view has been executed in home url
-    #     """
-    #     # alternativa não dinâmica: resolve('/')
-    #     view = resolve(self.home_url)
-    #     self.assertIs(view.func, views.home)
-
     def test_home_view_render_correct_template(self):
         """
         Tests if home url render the correct template
@@ -45,13 +37,6 @@ class RecipeHomeViewsTest(RecipeTestBase):
         """
         self.assertEqual(self.response_home.status_code, 200)
 
-    # def test_home_view_template_loads_recipes(self):
-    #     self.make_recipe()
-    #     response = self.client.get(self.home_url)
-    #     query = response.context['recipes']
-
-    #     self.assertEqual(query.count(), 1)
-
     def test_recipes_not_published_are_not_appearing_in_home_view(self):
         """
         Tests if recipes not published dont appear in home page.
@@ -69,7 +54,7 @@ class RecipeHomeViewsTest(RecipeTestBase):
     @patch("recipes.views.site.PER_PAGES", new="3")
     def test_recipe_home_is_paginated(self):
         for i in range(8):
-            kwargs = {"slug": f"r{i}", "author_data": {"username": f"u{i}"}}
+            kwargs = {"author_data": {"username": f"u{i}"}, "title": f"Pão{i}"}
             self.make_recipe(**kwargs)
 
         response = self.client.get(reverse("recipes:home"))

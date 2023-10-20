@@ -26,7 +26,6 @@ class AuthorCreateRecipeForm(forms.ModelForm):
             "servings",
             "servings_unit",
             "category",
-            "slug",
             "preparation_step",
             "cover",
         )
