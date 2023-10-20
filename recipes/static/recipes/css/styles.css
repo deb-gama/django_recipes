@@ -70,19 +70,28 @@ img {
    max-width: 100%;
 }
 
-a {
-   color: var(--color-primary);
-   text-decoration: none;
-}
-
 .container {
    max-width: 100rem;
    margin: 0 auto;
    padding: var(--spacing-gutter-medium);
-
 }
 .main-header-container {
    background-color: var(--color-primary-dark);
+
+}
+
+.user-login {
+   position: relative;
+}
+
+.user-login a{
+   color: var(--color-white);
+   text-decoration: none;
+}
+
+.user-login em {
+   right: 0;
+   position: absolute;
 }
 
 .main-logo{
@@ -93,7 +102,7 @@ a {
    flex-flow: row nowrap;
    align-items: center;
    justify-content: center;
-   /* tamanho será definido pelo ocnteúdo. Ajuda a manter o link apenas no texto e logo */
+   /* tamanho será definido pelo conteúdo. Ajuda a manter o link apenas no texto e logo */
    width: fit-content;
    margin: 0 auto;
 }
@@ -158,6 +167,7 @@ a {
    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
    gap: var(--spacing-gutter-medium)
 }
+
 
 .recipe {
    background: var(--color-white);

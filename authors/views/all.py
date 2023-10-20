@@ -19,7 +19,7 @@ def register_view(request):
     This view is responsible for rendering an empty form when in GET mode and
     receiving the register_form_data in the register redirection  create view.
     """
-    title = "Auhors | Register"
+    title = "Authors | Register"
     register_form_data = request.session.get("register_form_data", None)
     form = RegisterForm(register_form_data)
 
@@ -42,7 +42,7 @@ def register_create(request):
 
     if form.is_valid():
         user = form.save(commit=False)
-        # criptografando a senha antes de salvar na database
+        # encrypting the password before saving to the database
         user.set_password(user.password)
         user.save()
         messages.success(request, "User successfully created. Please log in")
@@ -54,12 +54,17 @@ def register_create(request):
 
 
 def login_view(request):
-    title = "Auhors | Login"
+    title = "Authors | Login"
     form = LoginForm()
     return render(
         request,
         "authors/pages/login.html",
-        {"title": title, "form": form, "form_action": reverse("authors:login_create")},
+        {
+            "title": title,
+            "form": form,
+            "is_login_page": True,
+            "form_action": reverse("authors:login_create"),
+        },
     )
 
 
@@ -72,7 +77,6 @@ def login_create(request):
         raise Http404()
 
     form = LoginForm(request.POST)
-    # login_url = reverse('authors:login')
 
     if form.is_valid():
         authenticated_user = authenticate(
@@ -120,113 +124,6 @@ def dashboard_view(request):
         {
             "title": title,
             "recipes": recipes,
+            "is_dashboard_page": True,
         },
     )
-
-
-# These CRUD methods below are no longer being used. We refactored the CRUD using CBV,
-# but this code snippet is still here for teaching purposes only
-
-
-@login_required(login_url="authors:login", redirect_field_name="next")
-def dashboard_recipe_edit(request, recipe_id):
-    """
-    This view makes it possible to edit recipes
-    """
-    title = "Authors | Dashboard Edit Recipe"
-    recipe = Recipe.objects.filter(
-        is_published=False,
-        author=request.user,
-        pk=recipe_id,
-    ).first()
-
-    if not recipe:
-        raise Http404()
-
-    form = AuthorRecipeForm(
-        request.POST or None, files=request.FILES or None, instance=recipe
-    )
-
-    if form.is_valid():
-        # salvando os dados na variável antes de salvar na base de dados
-        recipe = form.save(commit=False)
-
-        recipe.author = request.user
-        recipe.preparation_step_is_html = False
-        recipe.is_published = False
-
-        # salvando na base de dados após verifcações feitas acima
-        recipe.save()
-        messages.success(request, "Your recipe was saved!")
-        return redirect(reverse("authors:dashboard_recipe_edit", args=(recipe_id,)))
-
-    return render(
-        request,
-        "authors/pages/dashboard_recipe.html",
-        {
-            "title": title,
-            "recipe": recipe,
-            "form": form,
-        },
-    )
-
-
-@login_required(login_url="authors:login", redirect_field_name="next")
-def dashboard_recipe_create(request):
-    """
-    This view makes it possible to create new recipes
-    """
-    title = "Authors | Dashboard Create Recipe"
-    recipe = Recipe()
-
-    form = AuthorCreateRecipeForm(
-        request.POST or None, files=request.FILES or None, instance=recipe
-    )
-
-    if form.is_valid():
-        # salvando os dados na variável antes de salvar na base de dados
-        recipe = form.save(commit=False)
-
-        recipe.author = request.user
-        recipe.preparation_step_is_html = False
-        recipe.is_published = False
-
-        # salvando na base de dados após verifcações feitas acima
-        recipe.save()
-        messages.success(request, "Your recipe was created!")
-        return redirect(reverse("authors:dashboard_recipe_edit", args=(recipe.id,)))
-        # return redirect(reverse('authors:dashboard_recipe_create'))
-
-    return render(
-        request,
-        "authors/pages/dashboard_recipe_create.html",
-        {
-            "title": title,
-            "form": form,
-        },
-    )
-
-
-@login_required(login_url="authors:login", redirect_field_name="next")
-def dashboard_recipe_delete(request):
-    """
-    This view makes it possible to delete recipes
-    """
-    if not request.POST:
-        raise Http404()
-
-    POST = request.POST
-    recipe_id = POST.get("id")
-
-    recipe = Recipe.objects.filter(
-        is_published=False,
-        author=request.user,
-        pk=recipe_id,
-    ).first()
-
-    if not recipe:
-        raise Http404()
-
-    recipe.delete()
-    messages.success(request, "Deleted successfully")
-    return redirect("authors:dashboard")

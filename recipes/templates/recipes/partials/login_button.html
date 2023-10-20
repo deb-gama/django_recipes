@@ -1,0 +1,7 @@
+<div class="user-login">
+    {% if is_login_page is not True and is_dashboard_page is not True and is_dashboard_recipe is not True %}
+    <a href="{% url 'authors:login' %}">
+        <em class="fa-solid fa-user-large fa-2xl"></em>
+    </a>
+    {% endif %}
+</div>

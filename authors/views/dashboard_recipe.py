@@ -23,6 +23,7 @@ class DashboardRecipe(View):
                 "title": title,
                 "recipe": recipe,
                 "form": form,
+                "is_dashboard_page": True,
             },
         )
 
