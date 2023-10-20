@@ -15,7 +15,7 @@ from recipes.models import Recipe
     login_required(login_url="authors:login", redirect_field_name=next), name="dispatch"
 )
 class DashboardRecipe(View):
-    def render_recipe(self, form, title, recipe):
+    def render_recipe(self, form, title, recipe, is_dashboard):
         return render(
             self.request,
             "authors/pages/dashboard_recipe.html",
@@ -23,7 +23,7 @@ class DashboardRecipe(View):
                 "title": title,
                 "recipe": recipe,
                 "form": form,
-                "is_dashboard_page": True,
+                "is_dashboard_page": is_dashboard,
             },
         )
 
@@ -46,8 +46,9 @@ class DashboardRecipe(View):
         recipe = self.get_recipe(recipe_id)
         title = "Authors | Dashboard Edit Recipe"
         form = AuthorRecipeForm(instance=recipe)
+        is_dashboard = True
 
-        return self.render_recipe(form, title, recipe)
+        return self.render_recipe(form, title, recipe, is_dashboard)
 
     def post(self, request, recipe_id=None):
         recipe = self.get_recipe(recipe_id)
@@ -69,7 +70,7 @@ class DashboardRecipe(View):
             messages.success(request, "Your recipe was saved!")
             return redirect(reverse("authors:dashboard_recipe_edit", args=(recipe.id,)))
 
-        return self.render_recipe(form, title, recipe)
+        return self.render_recipe(form, title, recipe,is_dashboard)
 
 
 @method_decorator(
