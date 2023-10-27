@@ -1,18 +1,15 @@
 from django.urls import resolve, reverse
-
 from recipes.views import site
-
 from .recipe_base_test import RecipeTestBase
 
 
-class RecipeSeacrhViewsTest(RecipeTestBase):
-    # def test_recipe_search_view_function(self):
-    #     """
-    #     Test must confirm if the correct view has been executed in search url
-    #     """
-    #     # alternativa não dinâmica: resolve('/')
-    #     view = resolve(self.search_url)
-    #     self.assertIs(view.func, views.search)
+class RecipeSearchViewsTest(RecipeTestBase):
+    def test_recipe_search_view_function(self):
+        """
+        Test must confirm if the correct view has been executed in search url
+        """
+        view = resolve(self.search_url)
+        self.assertIs(view.func.view_class, site.RecipesListSearch)
 
     def test_search_view_render_correct_template(self):
         """
@@ -37,40 +34,30 @@ class RecipeSeacrhViewsTest(RecipeTestBase):
 
         self.assertIn("Search for &quot;Test&quot;", response.content.decode("utf-8"))
 
-    # def test_recipe_search_can_find_recipe_by_title(self):
-    #     title_1 = 'This is recipe one'
-    #     title_2 = 'This is recipe two'
+    def test_recipe_search_can_find_recipe_by_title(self):
+        title_1 = "This is recipe one"
+        title_2 = "This is recipe two"
 
-    #     recipe_1 = self.make_recipe(
-    #         slug='one',
-    #         title=title_1,
-    #         author_data={'username': 'one'}
-    #     )
+        recipe_1 = self.make_recipe(
+            slug="one", title=title_1, author_data={"username": "one"}
+        )
 
-    #     recipe_2 = self.make_recipe(
-    #         slug='two',
-    #         title=title_2,
-    #         author_data={'username': 'two'}
-    #     )
+        recipe_2 = self.make_recipe(
+            slug="two", title=title_2, author_data={"username": "two"}
+        )
 
-    #     response_1 = self.client.get(f'{self.search_url}?q={title_1}')
-    #     response_2 = self.client.get(f'{self.search_url}?q={title_2}')
-    #     response_both = self.client.get(f'{self.search_url}?q=this')
+        response_1 = self.client.get(f"{self.search_url}?q={title_1}")
+        response_2 = self.client.get(f"{self.search_url}?q={title_2}")
+        response_both = self.client.get(f"{self.search_url}?q=this")
 
-    #     self.assertIn(recipe_1,
-    #                   response_1.context['recipes'])
+        self.assertIn(recipe_1, response_1.context["recipes"])
 
-    #     self.assertNotIn(recipe_1,
-    #                      response_2.context['recipes'])
+        self.assertNotIn(recipe_1, response_2.context["recipes"])
 
-    #     self.assertIn(recipe_2,
-    #                   response_2.context['recipes'])
+        self.assertIn(recipe_2, response_2.context["recipes"])
 
-    #     self.assertNotIn(recipe_2,
-    #                      response_1.context['recipes'])
+        self.assertNotIn(recipe_2, response_1.context["recipes"])
 
-    #     self.assertIn(recipe_2,
-    #                   response_both.context['recipes'])
+        self.assertIn(recipe_2, response_both.context["recipes"])
 
-    #     self.assertIn(recipe_1,
-    #                   response_both.context['recipes'])
+        self.assertIn(recipe_1, response_both.context["recipes"])
