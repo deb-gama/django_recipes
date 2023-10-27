@@ -1,22 +1,23 @@
-
 <div class="recipe recipe-list-item">
     <div class="recipe-cover">
-        <a href="{% url 'recipes:recipe' recipe.id %}">
+        <a href="{{ recipes.get_absolute_url }}">
             <img src="{{recipe.cover.url}}" alt="temp">
         </a>
     </div>
 
     <div class="recipe-title-container">
-        <h2 class="recipe-title">{{recipe.title}}</h2>
+        <h2 class="recipe-title">
+            {{ recipe.title }}
+        </h2>
     </div>
 
     <div class="recipe-author">
         <span class="recipe-author-item">
             <em class="fa-regular fa-user"></em>
             {% if recipe.author.first_name %}
-                {{recipe.author.first_name}} {{recipe.author.last_name}}
+            {{recipe.author.first_name}} {{recipe.author.last_name}}
             {% else %}
-                {{recipe.author.username}}
+            {{recipe.author.username}}
             {% endif %}
         </span>
         <span class="recipe-author-item">
@@ -25,12 +26,12 @@
         </span>
 
         {% if recipe.category is not None %}
-            <span class="recipe-author-item">
-                <a href="{% url 'recipes:category' recipe.category.id %}">
-                    <em class="fa-sharp fa-solid fa-layer-group"></em>
-                    <span>{{recipe.category.name}}</span>
-                </a>
-            </span>
+        <span class="recipe-author-item">
+            <a href="{% url 'recipes:category' recipe.category.id %}">
+                <em class="fa-sharp fa-solid fa-layer-group"></em>
+                <span>{{recipe.category.name}}</span>
+            </a>
+        </span>
         {% endif %}
     </div>
 
@@ -60,20 +61,20 @@
     </div>
 
     {% if is_detail_page is not True %}
-        <footer class="recipe-footer">
-            <a href="{% url 'recipes:recipe' recipe.id %}" class="recipe-read-more button-dark button-full-width">
-                <em class="fa-solid fa-eye"></em>
-                <span>ver mais...</span>
-            </a>
-        </footer>
+    <footer class="recipe-footer">
+        <a href="{% url 'recipes:recipe' recipe.id %}" class="recipe-read-more button-dark button-full-width">
+            <em class="fa-solid fa-eye"></em>
+            <span>ver mais...</span>
+        </a>
+    </footer>
     {% else %}
-        <div class="preparation-steps">
-            {% if recipe.preparation_step_is_html is True %}
-                {{recipe.preparation_step|safe}}
-            {% else%}
-                {{recipe.preparation_step|linebreaksbr}}
-            {% endif %}
-        </div>
+    <div class="preparation-steps">
+        {% if recipe.preparation_step_is_html is True %}
+        {{recipe.preparation_step|safe}}
+        {% else%}
+        {{recipe.preparation_step|linebreaksbr}}
+        {% endif %}
+    </div>
     {% endif %}
 
 

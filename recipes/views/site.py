@@ -3,7 +3,7 @@ import os
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_list_or_404, get_object_or_404, render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from recipes.models import Recipe
 
@@ -44,6 +44,24 @@ class RecipesListViewHome(RecipesListViewBase):
         title = "Home | Recipes"
 
         context.update({"title": title})
+        return context
+
+
+class RecipeDetailView(DetailView):
+    model = Recipe
+    context_object_name = "recipe"
+    template_name = "recipes/pages/recipe_detail.html"
+
+    def get_queryset(self, *args, **kwargs):
+        query_set = super().get_queryset(*args, **kwargs)
+        query_set = query_set.filter(is_published=True)
+        return query_set
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        context.update({"is_detail_page": True})
+
         return context
 
 
