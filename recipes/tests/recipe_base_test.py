@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.urls import reverse
-
 from recipes.models import Category, Recipe, User
 
 
@@ -10,14 +9,9 @@ class RecipeTestBase(TestCase):
         self.category_url = reverse(
             "recipes:category", kwargs={"category_id": self.id_category}
         )
-        self.recipe_id = 2
-        self.recipe_url = reverse(
-            "recipes:recipe", kwargs={"recipe_id": self.recipe_id}
-        )
         self.home_url = reverse("recipes:home")
         self.response_home = self.client.get(self.home_url)
         self.response_category = self.client.get(self.category_url)
-        self.response_recipe = self.client.get(self.recipe_url)
         self.search_url = reverse("recipes:search")
 
         return super().setUp()

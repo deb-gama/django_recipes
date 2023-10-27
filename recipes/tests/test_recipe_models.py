@@ -1,6 +1,5 @@
-from django.core.exceptions import ValidationError
 from parameterized import parameterized
-
+from django.core.exceptions import ValidationError
 from .recipe_base_test import Category, Recipe, RecipeTestBase
 
 
@@ -27,27 +26,14 @@ class RecipeModelTest(RecipeTestBase):
         recipe.save()
         return recipe
 
-    # def test_recipe_title_raises_error_if_bigger_than_field_max_length(self):
-    #     """
-    #     This test make the validation of recipe title max length raising a Validation Error
-    #     """
-    #     self.recipe.title = 'A'*70
+    def test_recipe_title_raises_error_if_bigger_than_field_max_length(self):
+        """
+        This test make the validation of recipe title max length raising a Validation Error
+        """
+        self.recipe.title = "A" * 70
 
-    #     with self.assertRaises(ValidationError):
-    #         self.recipe.full_clean()  # validação acontece aqui e o código
-    # para
-
-    # def test_recipe_description_raises_error_if_bigger_than_field_
-    # max_length(self):
-    #     """
-    #     This test make the validation of recipe title max length raising a
-    # Validation Error
-    #     """
-    #     self.recipe.description = 'A'*166
-    #     self.recipe.full_clean()
-    #     self.fail()
-
-    # with self.assertRaises(ValidationError):
+        with self.assertRaises(ValidationError):
+            self.recipe.full_clean()  # validação acontece aqui e o código para
 
     @parameterized.expand(
         [

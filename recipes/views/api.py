@@ -12,9 +12,6 @@ from recipes.serializers import RecipeSerializer
 
 from ..permissions import IsOwner
 
-# from rest_framework.decorators import api_view
-# from rest_framework.generics import (ListCreateAPIView,
-
 
 class RecipeAPIv1Pagination(PageNumberPagination):
     page_size = 3
@@ -63,23 +60,3 @@ class RecipeAPIv1ViewSet(ModelViewSet):
         return Response(
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
         )
-
-
-# This code block was replaced by ViewSet for avoid duplication
-# class RecipesAPIv1List(ListCreateAPIView):
-#     """
-#     View that contains the get and post methods and have the same url without a pk in it.
-#     The 'get' method list recipes and the 'post' method create a new recipe.
-#     """
-#     queryset = Recipe.objects.get_published()
-#     serializer_class = RecipeSerializer
-#     pagination_class = RecipeAPIv1Pagination
-
-# class RecipeAPIv1Detail(RetrieveUpdateDestroyAPIView):
-#     """
-#     View that contains the read, patch and delete methods and have the same url with a pk in it.
-#     The 'get' method list recipes and the 'post' method create a new recipe.
-#     """
-#     queryset = Recipe.objects.get_published()
-#     serializer_class = RecipeSerializer
-#     pagination_class = RecipeAPIv1Pagination
