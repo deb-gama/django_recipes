@@ -9,7 +9,7 @@ run:
 	python3 manage.py runserver
 
 test:
-	python3 -m pytest -k $(TEST) -v
+	python3 -m pytest -k $(TEST) -vv
 
 all-tests:	
 	python3 -m pytest -v
