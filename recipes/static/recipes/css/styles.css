@@ -186,7 +186,6 @@ img {
 .recipe-list-item {
    max-width: 64rem;
    height: fit-content;
-
 }
 
 .recipe-list-item:hover {
@@ -195,8 +194,14 @@ img {
 }
 
 .recipe-title-container {
-   padding: var(--spacing-gutter-medium);
-   padding-bottom: 1rem;
+   text-overflow: ellipsis;
+   height: 10rem;
+}
+
+.recipe-title {    
+   padding: 1rem;
+   width: fit-content;
+   margin: 0 auto;
 }
 
 .recipe-author {
@@ -396,6 +401,26 @@ img {
    text-align: left;
    margin: 0 auto;
 
+}
+
+.author-dashboard-recipes-list{
+   /* text-decoration: none; */
+}
+
+.author-dashboard-recipes-list li {
+   display: flex;
+   padding: 2px;
+   justify-content: space-between;
+}
+
+.form-delete button {
+   background-color: var(--color-gray-4);
+   color: var(--color-white);
+   border: none;
+   border-radius: 2px;
+   width: 10rem;
+   height: 2.5rem;
+   cursor: pointer;
 }
 
 .author-dashboard-container h3,
