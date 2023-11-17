@@ -1,9 +1,17 @@
 {% if messages %}
 <div class="main-content center container messages-container">
     {% for message in messages %}
-    <div class="message message-{{ message.tags }}">
+    <div id="flash-message" class="message message-{{ message.tags }}">
         {{ message }}
     </div>
+    <script>
+        setTimeout(function () {
+            let flashMessage = document.getElementById('flash-message');
+            if (flashMessage) {
+                flashMessage.style.display = 'none';
+            }
+        }, 2000);  // 2000 milliseconds (2 seconds)
+    </script>
     {% endfor %}
 </div>
 {% endif %}
