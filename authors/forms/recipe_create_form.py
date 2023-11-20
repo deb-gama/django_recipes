@@ -13,9 +13,6 @@ class AuthorCreateRecipeForm(forms.ModelForm):
 
         self._recipe_create_errors = defaultdict(list)
 
-        add_attr(self.fields.get("preparation_step"), "class", "span-2")
-        add_attr(self.fields.get("cover"), "class", "span-2")
-
     class Meta:
         model = Recipe
         fields = (
@@ -30,7 +27,6 @@ class AuthorCreateRecipeForm(forms.ModelForm):
             "cover",
         )
         widgets = {
-            "cover": forms.FileInput(attrs={"class": "span-2"}),
             "servings_unit": forms.Select(
                 choices=(
                     ("Porções", "Porções"),

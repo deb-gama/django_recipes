@@ -369,6 +369,10 @@ img {
    color: var(--color-white);
 }
 
+.register-form {
+   margin-bottom: 80px;
+}
+
 .message {
    padding: 1rem 2rem;
    border-radius: 0.4rem;
@@ -433,9 +437,9 @@ img {
    cursor: pointer;
 }
 
-.span-2 {
+/* .span-2 {
    grid-column: span 2;
-}
+} */
 
 .author-dashboard-container {
    max-width: 64rem;

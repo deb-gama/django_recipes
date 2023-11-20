@@ -1291,7 +1291,7 @@
         "kind": 6,
         "importPath": "authors.forms.recipe_create_form",
         "description": "authors.forms.recipe_create_form",
-        "peekOfCode": "class AuthorCreateRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self._recipe_create_errors = defaultdict(list)\n        add_attr(self.fields.get(\"preparation_step\"), \"class\", \"span-2\")\n        add_attr(self.fields.get(\"cover\"), \"class\", \"span-2\")\n    class Meta:\n        model = Recipe\n        fields = (\n            \"title\",",
+        "peekOfCode": "class AuthorCreateRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self._recipe_create_errors = defaultdict(list)\n    class Meta:\n        model = Recipe\n        fields = (\n            \"title\",\n            \"description\",\n            \"preparation_time\",",
         "detail": "authors.forms.recipe_create_form",
         "documentation": {}
     },
@@ -1300,7 +1300,7 @@
         "kind": 6,
         "importPath": "authors.forms.recipe_form",
         "description": "authors.forms.recipe_form",
-        "peekOfCode": "class AuthorRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        add_attr(self.fields.get(\"preparation_step\"), \"class\", \"span-2\")\n        add_attr(self.fields.get(\"cover\"), \"class\", \"span-2\")\n    class Meta:\n        model = Recipe\n        fields = (\n            \"title\",\n            \"description\",",
+        "peekOfCode": "class AuthorRecipeForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n    class Meta:\n        model = Recipe\n        fields = (\n            \"title\",\n            \"description\",\n            \"preparation_time\",\n            \"preperation_time_unit\",",
         "detail": "authors.forms.recipe_form",
         "documentation": {}
     },

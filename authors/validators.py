@@ -26,7 +26,6 @@ class AuthorCreateRecipeValidator:
             "cover",
         )
         widgets = {
-            "cover": forms.FileInput(attrs={"class": "span-2"}),
             "servings_unit": forms.Select(
                 choices=(
                     ("Porções", "Porções"),
