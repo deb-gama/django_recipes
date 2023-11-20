@@ -1,0 +1,34 @@
+{% if request.user.is_authenticated %}
+<div class="main-content center container dashboard-title">
+    <h1>Hi, {{user.first_name}}! Welcome to your Dashboard!</h1>
+</div>
+<div class="inline-form">
+    <div>
+        <a href="{% url 'authors:dashboard' %}">
+            <em class="fa-solid fa-list fa-2xl"></em>
+        </a>
+        <p>See your recipes</p>
+    </div>
+    <div>
+        <a href="{% url 'authors:dashboard_recipe_create' %}">
+            <em class="fa-solid fa-plus fa-2xl"></em>
+        </a>
+        <p>Create a new recipe</p>
+    </div>
+    <div>
+        <a href="{% url 'recipes:home' %}">
+            <em class="fa-solid fa-house fa-2xl"></em>
+        </a>
+        <p>Home</p>
+    </div>
+    <div>
+        <form action="{% url 'authors:logout' %}" method="POST">
+            <button><em class="fa-solid fa-hand fa-2xl"></em></button>
+            {% csrf_token %}
+            <input type="hidden" value="{{request.user.username}}">
+            <p>Logout</p>
+
+        </form>
+    </div>
+</div>
+{% endif %}

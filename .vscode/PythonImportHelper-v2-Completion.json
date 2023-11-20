@@ -1381,7 +1381,7 @@
         "kind": 2,
         "importPath": "authors.views.all",
         "description": "authors.views.all",
-        "peekOfCode": "def dashboard_view(request):\n    \"\"\"\n    This view lists the author´s recipes.\n    \"\"\"\n    title = \"Authors | Dashboard\"\n    recipes = Recipe.objects.filter(\n        is_published=False,\n        author=request.user,\n    )\n    return render(",
+        "peekOfCode": "def dashboard_view(request):\n    \"\"\"\n    This view lists the author´s recipes.\n    \"\"\"\n    title = \"Authors | Dashboard\"\n    recipes = Recipe.objects.filter(\n        author=request.user,\n    ).order_by(\"is_published\")\n    return render(\n        request,",
         "detail": "authors.views.all",
         "documentation": {}
     },

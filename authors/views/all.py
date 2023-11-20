@@ -114,9 +114,8 @@ def dashboard_view(request):
     """
     title = "Authors | Dashboard"
     recipes = Recipe.objects.filter(
-        is_published=False,
         author=request.user,
-    )
+    ).order_by("is_published")
 
     return render(
         request,

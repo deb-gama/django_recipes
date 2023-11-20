@@ -3,28 +3,54 @@
 
 {% block content %}
 {% include 'recipes/partials/header.html' %}
-{% include 'recipes/partials/search.html' %}
-
-<div class="main-content center container">
-    <h2>Hi, {{user}}! Welcome to your Dashboard!</h2>
-
-</div>
 {% include 'recipes/partials/messages.html' %}
+
 <div class=" main-content center container">
-    {% include 'authors/partials/logout_message.html' %}
+    {% include 'authors/partials/dashboard_menu.html' %}
+    {% include 'recipes/partials/search.html' %}
 
     <div class="author-dashboard-container">
-        <h3>Your Recipes</h3>
         <div class="author-dashboard-recipes-list">
             <ul>
                 {% for recipe in recipes %}
                 <li>
-                    <a href="{% url 'authors:dashboard_recipe_edit' recipe.id %}">{{ recipe.title }}</a>
-                    <form class="form-delete" action="{% url 'authors:dashboard_recipe_delete' %}" method='POST'>
-                        {% csrf_token %}
-                        <input type="hidden" name="id" value={{recipe.id}}>
-                        <button type="submit"> Delete </button>
-                    </form>
+                    <span class="recipe-li-item-title">
+                        {{recipe.title}}
+                    </span>
+                    <span class="recipe-li-item">
+                        {% if recipe.is_published%}
+                        <span class="published_recipe" title="Publicada">
+                            <em class="fa-solid fa-check fa-lg"></em>
+                        </span>
+                        {% else %}
+                        <span class="not_published_recipe" title="Aguardando publicação">
+                            <em class="fa-solid fa-circle-exclamation fa-lg"></em>
+                        </span>
+                        {% endif %}
+                    </span>
+                    {% if not recipe.is_published %}
+                    <span class="recipe-li-item" title="Deletar">
+                        <form class="form-delete" action="{% url 'authors:dashboard_recipe_delete' %}" method='POST'>
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value={{recipe.id}}>
+                            <button type="submit"><em class="fa-solid fa-trash fa-lg"></em></button>
+                        </form>
+                        {% else %}
+                        <span class="recipe-li-item"></span>
+                        {% endif %}
+                    </span>
+                    {% if not recipe.is_published %}
+                    <span class="recipe-li-item" title="Editar">
+                        <form class="form-edit" action="{% url 'authors:dashboard_recipe_edit' recipe.id %}"
+                            method='GET'>
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value={{recipe.id}}>
+                            <button type="submit"> <em class="fa-solid fa-pen-to-square fa-lg"></em></button>
+                        </form>
+                        {% else %}
+                        <span class="recipe-li-item"></span>
+                        {% endif %}
+                    </span>
                 </li>
                 {% empty %}
                 <li>

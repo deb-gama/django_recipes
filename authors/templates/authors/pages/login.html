@@ -2,17 +2,18 @@
 
 {% block content %}
 {% include 'recipes/partials/header.html' %}
-
-<div class="main-content center container">
-    <h2>Login</h2>
-    {% include 'authors/partials/logout_message.html' %}
+<div class=" main-content center container">
+    {% include 'authors/partials/dashboard_menu.html' %}
 </div>
-
 {% include 'recipes/partials/messages.html' %}
 
 
 <div class=" main-content center container">
-    <form action="{% url 'authors:login_create' %}" method="POST">
+    {% if not request.user.is_authenticated %}
+    <h1>Login</h1>
+    <p>Ainda não tem cadastro? Registre-se <a href="{% url 'authors:register' %}">aqui</a>.</p>
+
+    <form class="form-login" action="{% url 'authors:login_create' %}" method="POST">
         {% csrf_token %}
 
         <div class="form-content form-content-grid">
@@ -36,13 +37,14 @@
                 There are errors in the form. Please fix them, and send again
             </div>
         </div>
+
         {% endif %}
 
         <div class="form-group center">
             <button type="submit">Login</button>
         </div>
     </form>
-
+    {% endif %}
 
 </div>
 {% include 'recipes/partials/footer.html' %}
