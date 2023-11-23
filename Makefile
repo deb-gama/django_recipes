@@ -17,5 +17,8 @@ all-tests:
 poetry:
 	poetry shell
 
+install:
+	poetry install
+
 format:
 	black .

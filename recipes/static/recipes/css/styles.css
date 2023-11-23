@@ -261,6 +261,10 @@ img {
    font-size: 1.8rem;
 }
 
+.main-content-detail {
+   margin-bottom: 80px;
+}
+
 .main-content-detail .recipe-list-item {
    max-width: 84rem;
    margin: 0 auto;
